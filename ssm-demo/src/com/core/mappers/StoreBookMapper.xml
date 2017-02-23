@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.core.dao.StoreBookDao">
+    <resultMap type="StoreBook" id="StoreBookResult">
+        <result property="id" column="id"/>
+        <result property="bookId" column="isbn"/>
+        <result property="storeId" column="storeId"/>
+        <result property="number" column="number"/>
+        <result property="inDate" column="inDate"/>
+    </resultMap>
+
+    <select id="findStoreBooks" parameterType="Map" resultMap="StoreBookResult">
+        select * from ssm_storebook
+        <where>
+            <if test="isbn!=null and isbn!='' ">
+                and isbn = #{isbn}
+            </if>
+            <if test="storeId!=null and storeId!='' ">
+                and storeId = #{storeId}
+            </if>
+        </where>
+        <if test="start!=null and size!=null">
+            limit #{start},#{size}
+        </if>
+    </select>
+
+    <select id="getTotalStoreBooks" parameterType="Map" resultType="Long">
+        select count(*) from ssm_storebook
+        <where>
+            <if test="isbn!=null and isbn!='' ">
+                and isbn = #{isbn}
+            </if>
+            <if test="storeId!=null and storeId!='' ">
+                and storeId = #{storeId}
+            </if>
+        </where>
+    </select>
+    <insert id="insertStoreBook" parameterType="StoreBook">
+        insert into
+        ssm_storebook
+        values(null,#{bookId},#{storeId},#{number},#{inDate})
+    </insert>
+
+    <update id="updStoreBook" parameterType="StoreBook">
+        update ssm_storebook
+        set
+        isbn=#{bookId},
+        storeId=#{storeId},
+        number=#{number}
+        where id=#{id}
+    </update>
+
+
+    <delete id="delStoreBook" parameterType="String">
+        delete from
+        ssm_storebook where id=#{id}
+    </delete>
+
+    <select id="getStoreBookById" parameterType="String" resultMap="StoreBookResult">
+        select *
+        from ssm_storebook where id=#{id}
+    </select>
+
+    <select id="getStoreBook" parameterType="Map" resultMap="StoreBookResult">
+        select *
+        from ssm_storebook where isbn=#{isbn} and storeId=#{storeId}
+    </select>
+</mapper> 

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.core.dao.StoreDao">
+    <resultMap type="Store" id="StoreResult">
+        <result property="id" column="id"/>
+        <result property="category" column="category"/>
+        <result property="number" column="number"/>
+        <result property="level" column="level"/>
+        <result property="page" column="page"/>
+        <result property="status" column="status"/>
+    </resultMap>
+
+    <select id="findStores" parameterType="Map" resultMap="StoreResult">
+        select * from ssm_store
+        <where>
+            <if test="status!=null and status!='' ">
+                and status = #{status}
+            </if>
+            <if test="number!=null and number!='' ">
+                and number = #{number}
+            </if>
+        </where>
+        <if test="start!=null and size!=null">
+            limit #{start},#{size}
+        </if>
+    </select>
+
+    <select id="getTotalStores" parameterType="Map" resultType="Long">
+        select count(*) from ssm_store
+        <where>
+            <if test="status!=null and status!='' ">
+                and status = #{status}
+            </if>
+            <if test="number!=null and number!='' ">
+                and number = #{number}
+            </if>
+        </where>
+    </select>
+
+    <insert id="insertStore" parameterType="Store">
+        insert into
+        ssm_store
+        values(null,#{category},#{number},#{level},0,0)
+    </insert>
+
+    <update id="updStore" parameterType="Store">
+        update ssm_store
+        set
+        status=#{status},
+        page=#{page}
+        where id=#{id}
+    </update>
+
+
+    <delete id="delStore" parameterType="String">
+        delete from
+        ssm_store where id=#{id}
+    </delete>
+
+    <select id="getStoreById" parameterType="String" resultMap="StoreResult">
+        select *
+        from ssm_store where id=#{id}
+    </select>
+
+    <select id="getOptimalStore" resultMap="StoreResult">
+        select *
+        from ssm_store where status=0 and page &lt;=38500 order by id limit 1;
+    </select>
+</mapper> 

@@ -1,0 +1,153 @@
+#add_item {
+    top: 12px;
+    right: 50px
+}
+
+.list_item_a, .list_item_b, .list_item_c, .list_item_d, .list_item_e, .list_item_f, .list_item_j, .list_sku_a, .list_sku_b, .list_sku_c, .list_sku_d {
+    float: left
+}
+
+.list_item_a, .list_sku_a {
+    width: 30%;
+    position: relative
+}
+
+.list_item_b, .list_item_c, .list_sku_b, .list_sku_c {
+    width: 10%
+}
+
+.list_item_d, .list_item_e, .list_sku_d {
+    width: 12%
+}
+
+.list_item_f {
+    width: 14%
+}
+
+.list_item_j {
+    width: 12%
+}
+
+.list_item_j div.cate {
+    min-height: 80px;
+    text-align: left;
+    position: relative
+}
+
+.list_item_b, .list_item_c, .list_item_d, .list_item_e {
+    line-height: 80px
+}
+
+.list_item_f {
+    padding: 10px 0;
+    line-height: 30px
+}
+
+.list-checkbox {
+    top: 30%;
+    left: 0
+}
+
+.list_i_a {
+    margin-left: 20px;
+    display: block;
+    padding-left: 95px
+}
+
+.list_sku_a {
+    padding-left: 115px;
+    width: 155px;
+    line-height: 20px
+}
+
+.list_i_i {
+    top: 0;
+    left: 0
+}
+
+.list_i_p {
+    padding-top: 8px;
+    height: 72px;
+    line-height: 24px
+}
+
+.sku_ul {
+    padding-top: 10px;
+    display: block
+}
+
+.sku_li {
+    line-height: 36px;
+    display: block;
+    overflow: hidden
+}
+
+.sku_li div {
+    word-break: break-all
+}
+
+#list_empty {
+    height: 60px;
+    line-height: 60px;
+    text-align: center
+}
+
+#item_search_hd {
+    height: 28px;
+    line-height: 28px;
+    padding: 15px 0;
+    box-shadow: 1px 1px 1px 1px #e2e2e4;
+    background-color: #fff;
+    margin-bottom: 12px
+}
+
+#item_search_btm {
+    height: 10px;
+    display: block
+}
+
+#row-title {
+    height: 54px;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    box-shadow: 1px 1px 1px 1px #e2e2e4;
+    background-color: #fff;
+    text-align: center
+}
+
+div.cate-box {
+    height: 20px;
+    line-height: 20px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: relative
+}
+
+div.show-cate-name {
+    position: absolute;
+    overflow: hidden;
+    line-height: 22px;
+    top: 0;
+    left: 50px;
+    border: 1px solid #e3e3e3;
+    padding: 5px;
+    background: #fff;
+    display: none;
+    border-radius: 5px
+}
+
+#row-title div {
+    float: left
+}
+
+.labelError {
+    line-height: 9px;
+    font-size: 10pt;
+    color: #f40000;
+    border: 1px #ffb8b8 solid;
+    padding: 8px 8px 8px 35px;
+    background: url(../images/error.png) no-repeat;
+    background-color: #fef2f2;
+}

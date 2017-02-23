@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+.top .logo {
+    margin-left: 23px;
+    display: inline-block;
+    width: 141px;
+}
+
+.top .msg {
+    margin-right: 23px;
+    display: inline-block;
+    margin-left: 38px;
+    padding-top: 5px;
+}
+
+.top .msg span {
+    display: block;
+    color: #000;
+    font-size: 14px;
+    width: 275px;
+}
+
+.tab {
+    width: 100%;
+    margin-top: 19px;
+}
+
+.tab tr {
+    border-top: #000 2px solid;
+    height: 30px;
+}
+
+.tab tr td {
+    width: 33.3%;
+    text-align: center;
+    color: #000;
+    font-size: 9px;
+    padding: 0;
+}
+
+/*add*/
+.er {
+    position: relative;
+    border-bottom: #000 2px solid;
+    border-top: #000 2px solid;
+    padding-bottom: 10px;
+    height: 255px;
+    font-weight: bold;
+}
+
+.er span {
+    margin-top: 18px;
+    padding-bottom: 7px;
+    font-size: 14px;
+    display: block;
+}
+
+.er i {
+    display: block;
+    font-family: "微软雅黑";
+    font-size: 12px;
+}
+
+.er img {
+    display: block;
+}
+
+.er .err {
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+}
+
+.tel {
+    border-bottom: #000 2px solid;
+    height: 23px;
+    line-height: 23px;
+}
