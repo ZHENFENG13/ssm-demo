@@ -20,6 +20,7 @@
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="url"
                   value="jdbc:mysql://xx.xx.xx.xx:xx/db"/>
+        <!-- 改为你的地址即可 -->
         <property name="username" value="xxxx"/>
         <property name="password" value="xxxx"/>
     </bean>
