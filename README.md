@@ -3,8 +3,12 @@
 Spring+SpringMVC+mybatis+easy-ui实现的一个简单demo，项目为两年前做的一个项目，后续会逐渐优化改造。
 ssm-demo目录下会有两个项目，分别是ssm-demo和ssm-maven-demo，ssm-demo为普通的JavaWeb工程，并没有引入maven管理项目，
 而ssm-maven-demo则为maven改造后的项目，使用maven统一管理项目jar包及项目构建。
-项目地址：http://ssm-demo.qess.me
 
+# 项目地址：
+  http://ssm-demo.qess.me
+  登录名：admin
+  密码：123456
+  
 # 项目框架包括：
 Spring
 SpringMVC
