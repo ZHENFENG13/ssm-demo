@@ -28,29 +28,4 @@ public class UserServiceImpl implements UserService {
         return userDao.login(user);
     }
 
-    @Override
-    public List<User> findUser(Map<String, Object> map) {
-        return userDao.findUsers(map);
-    }
-
-    @Override
-    public int updateUser(User user) {
-        return userDao.updateUser(user);
-    }
-
-    @Override
-    public Long getTotalUser(Map<String, Object> map) {
-        return userDao.getTotalUser(map);
-    }
-
-    @Override
-    public int addUser(User user) {
-        return userDao.addUser(user);
-    }
-
-    @Override
-    public int deleteUser(Integer id) {
-        return userDao.deleteUser(id);
-    }
-
 }
