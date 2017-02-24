@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.core.dao.UserDao">
+    <resultMap type="User" id="UserResult">
+        <result property="id" column="id"/>
+        <result property="userName" column="userName"/>
+        <result property="password" column="password"/>
+        <result property="roleName" column="roleName"/>
+    </resultMap>
+
+    <select id="login" parameterType="User" resultMap="UserResult">
+        select * from
+        ssm_user where userName=#{userName} and password=#{password} limit 1
+    </select>
+
+    <select id="findUsers" parameterType="Map" resultMap="UserResult">
+        select * from ssm_user
+        <where>
+            <if test="userName!=null and userName!='' ">
+                and userName like #{userName}
+            </if>
+        </where>
+        <if test="start!=null and size!=null">
+            limit #{start},#{size}
+        </if>
+    </select>
+
+    <select id="getTotalUser" parameterType="Map" resultType="Long">
+        select count(*) from ssm_user
+        <where>
+            <if test="userName!=null and userName!='' ">
+                and userName like #{userName}
+            </if>
+        </where>
+    </select>
+
+    <insert id="addUser" parameterType="User">
+        insert into ssm_user(userName,password)
+        values(#{userName},#{password})
+    </insert>
+
+    <update id="updateUser" parameterType="User">
+        update ssm_user
+        <set>
+            <if test="userName!=null and userName!='' ">
+                userName=#{userName},
+            </if>
+            <if test="password!=null and password!='' ">
+                password=#{password}
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+
+    <delete id="deleteUser" parameterType="Integer">
+        delete from ssm_user
+        where id=#{id}
+    </delete>
+</mapper> 
