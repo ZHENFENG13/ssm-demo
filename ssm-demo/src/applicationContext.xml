@@ -86,7 +86,7 @@
     <!-- 配置事务切面 -->
     <aop:config>
         <aop:pointcut id="serviceOperation"
-                      expression="(execution(* com.core.service.*.*(..))) OR (execution(* com.wechat.service.*.*(..)))   OR (execution(* com.ceo.service.*.*(..))) "/>
+                      expression="(execution(* com.core.service.*.*(..)))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceOperation"/>
     </aop:config>
 
