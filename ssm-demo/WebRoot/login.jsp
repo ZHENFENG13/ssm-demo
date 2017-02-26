@@ -1,61 +1,61 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//Dtd HTML 4.01 Transitional//EN">
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>系统登录</title>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/jquery-easyui-1.3.3/jquery.min.js"></script>
-    <STYLE type=text/css>
-        BODY {
-            TEXT-ALIGN: center;
-            PADDING-BOTTOM: 0px;
-            BACKGROUND-COLOR: #ddeef2;
-            MARGIN: 0px;
-            PADDING-LEFT: 0px;
-            PADDING-RIGHT: 0px;
-            PADDING-TOP: 0px
+    <title>ssm-demo系统登录</title>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+    <style type=text/css>
+        body {
+            text-align: center;
+            padding-bottom: 0px;
+            background-color: #ddeef2;
+            margin: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 0px
         }
 
         A:link {
             COLOR: #000000;
-            TEXT-DECORATION: none
+            text-decoration: none
         }
 
         A:visited {
             COLOR: #000000;
-            TEXT-DECORATION: none
+            text-decoration: none
         }
 
         A:hover {
             COLOR: #ff0000;
-            TEXT-DECORATION: underline
+            text-decoration: underline
         }
 
         A:active {
-            TEXT-DECORATION: none
+            text-decoration: none
         }
 
         .input {
-            BORDER-BOTTOM: #ccc 1px solid;
-            BORDER-LEFT: #ccc 1px solid;
-            LINE-HEIGHT: 20px;
-            WIDTH: 182px;
-            HEIGHT: 20px;
-            BORDER-TOP: #ccc 1px solid;
-            BORDER-RIGHT: #ccc 1px solid
+            border-bottom: #ccc 1px solid;
+            border-left: #ccc 1px solid;
+            line-height: 20px;
+            width: 182px;
+            height: 20px;
+            border-top: #ccc 1px solid;
+            border-right: #ccc 1px solid
         }
 
         .input1 {
-            BORDER-BOTTOM: #ccc 1px solid;
-            BORDER-LEFT: #ccc 1px solid;
-            LINE-HEIGHT: 20px;
-            WIDTH: 120px;
-            HEIGHT: 20px;
-            BORDER-TOP: #ccc 1px solid;
-            BORDER-RIGHT: #ccc 1px solid;
+            border-bottom: #ccc 1px solid;
+            border-left: #ccc 1px solid;
+            line-height: 20px;
+            width: 120px;
+            height: 20px;
+            border-top: #ccc 1px solid;
+            border-right: #ccc 1px solid;
         }
-    </STYLE>
+    </style>
     <script type="text/javascript">
         function login() {
             var userName = $("#userName").val();
@@ -75,72 +75,72 @@
     </script>
 </head>
 <body>
-<FORM id=adminlogin method=post
+<form id=adminlogin method=post
       name=adminlogin action="${pageContext.request.contextPath}/user/login.do">
-    <DIV></DIV>
-    <TABLE style="MARGIN: auto; WIDTH: 100%; HEIGHT: 100%" border=0
+    <div></div>
+    <table style="margin: auto; width: 100%; height: 100%" border=0
            cellSpacing=0 cellPadding=0>
-        <TBODY>
-        <TR>
-            <TD height=150>&nbsp;</TD>
-        </TR>
-        <TR style="HEIGHT: 254px">
-            <TD>
-                <DIV style="MARGIN: 0px auto; WIDTH: 936px"><IMG
-                        style="DISPLAY: block" src="${pageContext.request.contextPath}/images/body_03.jpg"></DIV>
-                <DIV style="BACKGROUND-COLOR: #278296">
-                    <DIV style="MARGIN: 0px auto; WIDTH: 936px">
-                        <DIV
-                                style="BACKGROUND: url(${pageContext.request.contextPath}/images/body_05.jpg) no-repeat; HEIGHT: 155px">
-                            <DIV
-                                    style="TEXT-ALIGN: left; WIDTH: 265px; FLOAT: right; HEIGHT: 125px; _height: 95px">
-                                <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%">
-                                    <TBODY>
-                                    <TR>
-                                        <TD style="HEIGHT: 45px"><INPUT type="text" class=input
+        <tbody>
+        <tr>
+            <td height=150>&nbsp;</td>
+        </tr>
+        <tr style="height: 254px">
+            <td>
+                <div style="margin: 0px auto; width: 936px"><img
+                        style="display: block" src="${pageContext.request.contextPath}/images/body_03.jpg"></div>
+                <div style="background-color: #278296">
+                    <div style="margin: 0px auto; width: 936px">
+                        <div
+                                style="BACKGROUND: url(${pageContext.request.contextPath}/images/body_05.jpg) no-repeat; height: 155px">
+                            <div
+                                    style="text-align: left; width: 265px; float: right; height: 125px; _height: 95px">
+                                <table border=0 cellSpacing=0 cellPadding=0 width="100%">
+                                    <tbody>
+                                    <tr>
+                                        <td style="height: 45px"><input type="text" class=input
                                                                         value="${user.userName }" name="userName"
-                                                                        id="userName"></TD>
-                                    </TR>
-                                    <TR>
-                                        <TD><INPUT type="password" class=input value="${user.password }" name="password"
-                                                   id="password"/></TD>
-                                    </TR>
-                                    </TBODY>
-                                </TABLE>
-                            </DIV>
-                            <DIV style="HEIGHT: 1px; CLEAR: both"></DIV>
-                            <DIV style="WIDTH: 380px; FLOAT: right; CLEAR: both">
-                                <TABLE border=0 cellSpacing=0 cellPadding=0 width=300>
-                                    <TBODY>
+                                                                        id="userName"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="password" class=input value="${user.password }" name="password"
+                                                   id="password"/></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div style="height: 1px; clear: both"></div>
+                            <div style="width: 380px; float: right; clear: both">
+                                <table border=0 cellSpacing=0 cellPadding=0 width=300>
+                                    <tbody>
 
-                                    <TR>
-                                        <TD width=100 align=right><INPUT
-                                                style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px"
+                                    <tr>
+                                        <td width=100 align=right><input
+                                                style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px"
                                                 id=btnLogin src="${pageContext.request.contextPath}/images/btn1.jpg"
                                                 type=image name=btnLogin onclick="javascript:login();return false;">
-                                        </TD>
-                                        <TD width=100 align=middle><INPUT
-                                                style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px"
+                                        </td>
+                                        <td width=100 align=middle><input
+                                                style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px"
                                                 id=btnReset src="${pageContext.request.contextPath}/images/btn2.jpg"
                                                 type=image name=btnReset
-                                                onclick="javascript:adminlogin.reset();return false;"></TD>
-                                    </TR>
-                                    </TBODY>
-                                </TABLE>
-                            </DIV>
-                        </DIV>
-                    </DIV>
-                </DIV>
-                <DIV style="MARGIN: 0px auto; WIDTH: 936px"><IMG
-                        src="${pageContext.request.contextPath}/images/body_06.jpg"></DIV>
-            </TD>
-        </TR>
-        <TR style="HEIGHT: 30%">
-            <TD>&nbsp;</TD>
-        </TR>
-        </TBODY>
-    </TABLE>
-</FORM>
+                                                onclick="javascript:adminlogin.reset();return false;"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin: 0px auto; width: 936px"><img
+                        src="${pageContext.request.contextPath}/images/body_06.jpg"></div>
+            </td>
+        </tr>
+        <tr style="height: 30%">
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+</form>
 </body>
 </html>
 <script type=text/javascript>
