@@ -1,0 +1,375 @@
+.icon-blank {
+    background: url('icons/blank.gif') no-repeat center center;
+}
+
+.icon-add {
+    background: url('icons/edit_add.png') no-repeat center center;
+}
+
+.icon-edit {
+    background: url('icons/pencil.png') no-repeat center center;
+}
+
+.icon-remove {
+    background: url('icons/edit_remove.png') no-repeat center center;
+}
+
+.icon-save {
+    background: url('icons/filesave.png') no-repeat center center;
+}
+
+.icon-cut {
+    background: url('icons/cut.png') no-repeat center center;
+}
+
+.icon-ok {
+    background: url('icons/ok.png') no-repeat center center;
+}
+
+.icon-no {
+    background: url('icons/no.png') no-repeat center center;
+}
+
+.icon-cancel {
+    background: url('icons/cancel.png') no-repeat center center;
+}
+
+.icon-reload {
+    background: url('icons/reload.png') no-repeat center center;
+}
+
+.icon-search {
+    background: url('icons/search.png') no-repeat center center;
+}
+
+.icon-print {
+    background: url('icons/print.png') no-repeat center center;
+}
+
+.icon-help {
+    background: url('icons/help.png') no-repeat center center;
+}
+
+.icon-undo {
+    background: url('icons/undo.png') no-repeat center center;
+}
+
+.icon-redo {
+    background: url('icons/redo.png') no-repeat center center;
+}
+
+.icon-back {
+    background: url('icons/back.png') no-repeat center center;
+}
+
+.icon-sum {
+    background: url('icons/sum.png') no-repeat center center;
+}
+
+.icon-tip {
+    background: url('icons/tip.png') no-repeat center center;
+}
+
+.icon-puton {
+    background: url('usericons/shangjia.png') no-repeat center center;
+}
+
+.icon-putoff {
+    background: url('usericons/xiajia.png') no-repeat center center;
+}
+
+.icon-jiaofu {
+    background: url('usericons/jiaofu.png') no-repeat center center;
+}
+
+.icon-order {
+    background: url('usericons/order.png') no-repeat center center;
+}
+
+.icon-excel {
+    background: url('usericons/excel.png') no-repeat center center;
+}
+
+.icon-dayin {
+    background: url('usericons/dayin.png') no-repeat center center;
+}
+
+.icon-orderInfo {
+    background: url('usericons/orderInfo.png') no-repeat center center;
+}
+
+.icon-kaoyan {
+    background: url('usericons/kaoyan.png') no-repeat center center;
+}
+
+.icon-qita {
+    background: url('usericons/qita.png') no-repeat center center;
+}
+
+.icon-mini-add {
+    background: url('icons/mini_add.png') no-repeat center center;
+}
+
+.icon-mini-edit {
+    background: url('icons/mini_edit.png') no-repeat center center;
+}
+
+.icon-mini-refresh {
+    background: url('icons/mini_refresh.png') no-repeat center center;
+}
+
+.icon-item {
+    background: url('usericons/xitong.png') no-repeat center center;
+}
+
+.icon-shuji {
+    background: url('usericons/shuguan.png') no-repeat center center;
+}
+
+.icon-home {
+    background: url('usericons/home.png') no-repeat center center;
+}
+
+.icon-ceo {
+    background: url('usericons/ceo.png') no-repeat center center;
+}
+
+.icon-school {
+    background: url('usericons/school.png') no-repeat center center;
+}
+
+.icon-schoolceo {
+    background: url('usericons/schoolceo.png') no-repeat center center;
+}
+
+.icon-sushe {
+    background: url('usericons/sushe.png') no-repeat center center;
+}
+
+.icon-modifyPassword {
+    background: url('usericons/password.png') no-repeat center center;
+}
+
+.icon-exit {
+    background: url('usericons/tuichu.png') no-repeat center center;
+}
+
+.icon-fuwenbens {
+    background: url('usericons/fuwenbens.png') no-repeat center center;
+}
+
+.icon-students {
+    background: url('usericons/students.png') no-repeat center center;
+}
+
+.icon-student {
+    background: url('usericons/student.png') no-repeat center center;
+}
+
+.icon-advices {
+    background: url('usericons/advices.png') no-repeat center center;
+}
+
+.icon-advice {
+    background: url('usericons/advice.png') no-repeat center center;
+}
+
+.icon-fahuo {
+    background: url('usericons/fahuo.png') no-repeat center center;
+}
+
+.icon-khkfjh {
+    background: url('usericons/khkfjh.png') no-repeat center center;
+}
+
+.icon-kaiqi {
+    background: url('usericons/kaiqi.png') no-repeat center center;
+}
+
+.icon-guanbi {
+    background: url('usericons/guanbi.png') no-repeat center center;
+}
+
+.icon-tags {
+    background: url('usericons/tags.png') no-repeat center center;
+}
+
+.icon-tag {
+    background: url('usericons/tag.png') no-repeat center center;
+}
+
+.icon-yxjhgl {
+    background: url('usericons/yxjhgl.png') no-repeat center center;
+}
+
+.icon-khgl {
+    background: url('usericons/khgl.png') no-repeat center center;
+}
+
+.icon-shuben {
+    background: url('usericons/shuben.png') no-repeat center center;
+}
+
+.icon-khlsgl {
+    background: url('usericons/khlsgl.png') no-repeat center center;
+}
+
+.icon-khxxgl {
+    background: url('usericons/khxxgl.png') no-repeat center center;
+}
+
+.icon-tupians {
+    background: url('usericons/tupians.png') no-repeat center center;
+}
+
+.icon-shujias {
+    background: url('usericons/shujias.png') no-repeat center center;
+}
+
+.icon-shujia {
+    background: url('usericons/shujia.png') no-repeat center center;
+}
+
+.icon-tan {
+    background: url('usericons/tan.png') no-repeat center center;
+}
+
+.icon-shouye {
+    background: url('usericons/shouye.png') no-repeat center center;
+}
+
+.icon-guanlian {
+    background: url('usericons/guanlian.png') no-repeat center center;
+}
+
+.icon-fwcj {
+    background: url('usericons/fwcj.png') no-repeat center center;
+}
+
+.icon-fwfp {
+    background: url('usericons/fwfp.png') no-repeat center center;
+}
+
+.icon-fwcl {
+    background: url('usericons/fwcl.png') no-repeat center center;
+}
+
+.icon-fwfk {
+    background: url('usericons/fwfk.png') no-repeat center center;
+}
+
+.icon-wenzhang {
+    background: url('usericons/wenzhang.png') no-repeat center center;
+}
+
+.icon-fenlei {
+    background: url('usericons/fenlei.png') no-repeat center center;
+}
+
+.icon-jiaocai {
+    background: url('usericons/jiaocai.png') no-repeat center center;
+}
+
+.icon-yasi {
+    background: url('usericons/yasi.png') no-repeat center center;
+}
+
+.icon-siji {
+    background: url('usericons/siji.png') no-repeat center center;
+}
+
+.icon-khgxfx {
+    background: url('usericons/khgxfx.png') no-repeat center center;
+}
+
+.icon-khgcfx {
+    background: url('usericons/khgcfx.png') no-repeat center center;
+}
+
+.icon-khfwfx {
+    background: url('usericons/khfwfx.png') no-repeat center center;
+}
+
+.icon-fuwenben {
+    background: url('usericons/fuwenben.png') no-repeat center center;
+}
+
+.icon-jcsjgl {
+    background: url('usericons/jcsjgl.png') no-repeat center center;
+}
+
+.icon-tupian {
+    background: url('usericons/tupian.png') no-repeat center center;
+}
+
+.icon-chuku {
+    background: url('usericons/chuku.png') no-repeat center center;
+}
+
+.icon-jiaocaih {
+    background: url('usericons/jiaocaih.png') no-repeat center center;
+}
+
+.icon-remen {
+    background: url('usericons/remen.png') no-repeat center center;
+}
+
+.icon-engh {
+    background: url('usericons/engh.png') no-repeat center center;
+}
+
+.icon-kaoh {
+    background: url('usericons/kaoh.png') no-repeat center center;
+}
+
+.icon-userh {
+    background: url('usericons/userh.png') no-repeat center center;
+}
+
+.icon-ruku {
+    background: url('usericons/ruku.png') no-repeat center center;
+}
+
+.icon-saoma {
+    background: url('usericons/saoma.png') no-repeat center center;
+}
+
+.icon-sjzdgl {
+    background: url('usericons/sjzdgl.png') no-repeat center center;
+}
+
+.icon-cpxxgl {
+    background: url('usericons/cpxxgl.png') no-repeat center center;
+}
+
+.icon-kfcg {
+    background: url('usericons/kfcg.png') no-repeat center center;
+}
+
+.icon-zzkf {
+    background: url('usericons/zzkf.png') no-repeat center center;
+}
+
+.icon-lxr {
+    background: url('usericons/guanliyuan.png') no-repeat center center;
+}
+
+.icon-jwjl {
+    background: url('usericons/jwjl.png') no-repeat center center;
+}
+
+.icon-wenzhangs {
+    background: url('usericons/wenzhangs.png') no-repeat center center;
+}
+
+.icon-reset {
+    background: url('usericons/reset.png') no-repeat center center;
+}
+
+.icon-user {
+    background: url('usericons/user.png') no-repeat center center;
+}
+
+.icon-confirm {
+    background: url('usericons/confirm.png') no-repeat center center;
+}
