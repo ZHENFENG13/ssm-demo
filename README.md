@@ -26,4 +26,4 @@ MyBatis <br />
 # 更新日志
   2017-02-23 初始化，接下来是bug修复，下一步打算将项目改为maven工程项目。 <br /> 
   2017-02-24 新增ssm-login项目，最基础的ssm项目搭建。 <br /> 
-  
+  2017-03-02 新增ssm-maven项目，Spring+SpringMVC+MyBatis+Maven+easyUI整合。 <br /> 
