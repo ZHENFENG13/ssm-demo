@@ -76,10 +76,11 @@
         <!-- End: 数据库依赖包 -->
 
         <!-- Begin: 日志依赖包 -->
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
         <dependency>
-            <groupId>org.slf4</groupId>
+            <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>20160310</version>
+            <version>1.7.7</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
