@@ -28,5 +28,4 @@ MyBatis <br />
   2017-02-24 新增ssm-login项目，最基础的ssm项目搭建。 <br /> 
   2017-03-02 新增ssm-maven项目，Spring+SpringMVC+MyBatis+Maven+easyUI整合。 <br /> 
   2017-03-07 中文搜索bug修复。<br /> 
-  2017-03-14 网友提醒:书架管理-查看书籍,JS报错 Cannot read property 'title' of null，数据原因，有些数据没删干净。<br/>
-             解决方法：delete from ssm_storebook where isbn not in (select id from ssm_book)。<br/>
+  2017-03-14 网友提醒:书架管理-查看书籍,JS报错 Cannot read property 'title' of null，数据原因，有些数据没删干净。 解决方法：delete from ssm_storebook where isbn not in (select id from ssm_book)。<br/>
