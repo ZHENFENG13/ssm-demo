@@ -5,6 +5,7 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 import com.ssm.maven.core.dao.BookDao;
@@ -21,6 +22,9 @@ import com.ssm.maven.core.service.StoreBookService;
 @Service("storeBookService")
 public class StoreBookServiceImpl implements StoreBookService {
     private static final long serialVersionUID = 1L;
+
+    private static final Logger log = Logger
+            .getLogger(StoreBookServiceImpl.class);// 日志文件
     @Resource
     private BookDao bookDao;
     @Resource
@@ -30,14 +34,14 @@ public class StoreBookServiceImpl implements StoreBookService {
 
     @Override
     public List<StoreBook> findStoreBooks(Map<String, Object> map) {
+        log.info("findStoreBooks," + map.toString());
         List<StoreBook> storeBooks = storeBookDao.findStoreBooks(map);
         for (StoreBook s : storeBooks) {
             try {
                 s.setBook(bookDao.getBookById(s.getBookId()));
                 s.setStore(storeDao.getStoreById(s.getStoreId()));
             } catch (Exception e) {
-                e.printStackTrace();
-                System.out.println("书架信息错误," + s.getBookId() + "," + s.getStoreId());
+                log.info("书架信息错误," + s.getBookId() + "," + s.getStoreId());
             }
         }
         return storeBooks;

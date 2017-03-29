@@ -3,6 +3,7 @@ package com.ssm.maven.core.service.impl;
 import com.ssm.maven.core.dao.BookDao;
 import com.ssm.maven.core.entity.Book;
 import com.ssm.maven.core.service.BookService;
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -17,6 +18,8 @@ import java.util.Map;
 @Service("bookService")
 public class BookServiceImpl implements BookService {
     private static final long serialVersionUID = 1L;
+    private static final Logger log = Logger
+            .getLogger(BookServiceImpl.class);// 日志文件
     @Resource
     private BookDao bookDao;
 
@@ -55,7 +58,7 @@ public class BookServiceImpl implements BookService {
         try {
             return bookDao.searchBooks(map);
         } catch (Exception e) {
-            System.out.println("书籍搜索失败," + map.toString());
+            log.info("书籍搜索失败," + map.toString());
         }
         return null;
     }

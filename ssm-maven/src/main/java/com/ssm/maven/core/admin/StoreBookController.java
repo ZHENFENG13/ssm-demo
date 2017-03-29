@@ -35,16 +35,12 @@ public class StoreBookController {
     private StoreBookService storeBookService;
     @Resource
     private StoreService storeService;
-    /**
-     * 这两个service的注入，是因为这是最终要频繁操作的书本详情
-     * bookService的注入，是因为插入storeBook时，可能出现数据库中没有此书的情况，所以要重新发一条请求去重新插入这条书本类的信息
-     * bookCategoryService，待续
-     */
+
     @Resource
     private BookService bookService;
 
-    private static final Logger log = Logger
-            .getLogger(StoreBookController.class);// 日志文件
+    private static final Logger log = Logger.getLogger(StoreBookController.class);// 日志文件
+
 
 
     /**
