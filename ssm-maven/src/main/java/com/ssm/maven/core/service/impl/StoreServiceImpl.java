@@ -59,9 +59,4 @@ public class StoreServiceImpl implements StoreService {
         return storeDao.getStoreById(id);
     }
 
-    @Override
-    public Store getOptimalStore() {
-        return storeDao.getOptimalStore();
-    }
-
 }
