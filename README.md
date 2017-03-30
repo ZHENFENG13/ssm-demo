@@ -1,4 +1,5 @@
 # ssm-demo <br /> 
+代码更新都会在ssm-maven项目下<br /> 
 
 Spring+SpringMVC+mybatis+easy-ui实现的一个简单demo，项目为两年前做的一个项目，后续会逐渐优化改造。 <br /> <br /> 
 ssm-demo仓库下会有三个项目，分别是ssm-demo、ssm-login、ssm-maven，ssm-demo为普通的JavaWeb工程，并没有引入maven管理项目， 
