@@ -64,10 +64,7 @@ public class StoreBookServiceImpl implements StoreBookService {
 
     @Override
     public StoreBook getStoreBookById(String id) {
-        StoreBook s = storeBookDao.getStoreBookById(id);
-        s.setBook(bookDao.getBookById(s.getBookId()));
-        s.setStore(storeDao.getStoreById(s.getStoreId()));
-        return s;
+        return storeBookDao.getStoreBookById(id);
     }
 
 }

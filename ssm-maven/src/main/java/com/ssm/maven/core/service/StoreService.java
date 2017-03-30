@@ -59,6 +59,5 @@ public interface StoreService extends Serializable {
      */
     public Store getStoreById(String id);
 
-    public Store getOptimalStore();
 
 }

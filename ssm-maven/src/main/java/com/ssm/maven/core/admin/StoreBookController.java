@@ -1,6 +1,5 @@
 package com.ssm.maven.core.admin;
 
-import com.ssm.maven.core.entity.Book;
 import com.ssm.maven.core.entity.PageBean;
 import com.ssm.maven.core.entity.Store;
 import com.ssm.maven.core.entity.StoreBook;
@@ -40,7 +39,6 @@ public class StoreBookController {
     private BookService bookService;
 
     private static final Logger log = Logger.getLogger(StoreBookController.class);// 日志文件
-
 
 
     /**
@@ -98,27 +96,12 @@ public class StoreBookController {
         int totalResult = 0;
         for (int i = 0; i < idsStr.length; i++) {
             StoreBook temp = storeBookService.getStoreBookById(idsStr[i]);
-            Store store = null;
             if (temp != null) {
                 if (temp.getNumber() > 1) {
                     temp.setNumber(temp.getNumber() - 1);
-                    storeBookService.updStoreBook(temp);
+                    totalResult += storeBookService.updStoreBook(temp);
                 } else {
-                    storeBookService.delStoreBook(idsStr[i]);
-                }
-                store = temp.getStore();
-                int totalPages = Integer.valueOf(store.getPage());
-                int pages = Integer.valueOf(temp.getBook().getPages());
-                if (totalPages >= pages) {
-                    store.setPage(totalPages - pages + "");
-                    Book book = bookService.getBookById(temp.getBookId());
-                    if (book.getSupply() > 0)
-                        book.setSupply(book.getSupply() - 1);
-                    if (book.getSupply() < 1)
-                        book.setStatus("0");
-                    // 数据更新后反序列化到数据库中
-                    //bookService.updBook(book);
-                    totalResult += storeService.updStore(store);
+                    totalResult += storeBookService.delStoreBook(idsStr[i]);
                 }
             }
         }
@@ -150,23 +133,7 @@ public class StoreBookController {
             Store store = null;
             // 只要不是空对象就直接删除
             if (temp != null) {
-                storeBookService.delStoreBook(idsStr[i]);
-                store = temp.getStore();
-                int totalPages = Integer.valueOf(store.getPage());
-                int pages = Integer.valueOf(temp.getBook().getPages())
-                        * temp.getNumber();
-                if (totalPages >= pages) {
-                    store.setPage(totalPages - pages + "");
-
-                    Book book = bookService.getBookById(temp.getBookId());
-                    if (book.getSupply() > 0)
-                        book.setSupply(book.getSupply() - temp.getNumber());
-                    if (book.getSupply() < 1)
-                        book.setStatus("0");
-                    // 数据更新后反序列化到数据库中
-                    //bookService.updBook(book);
-                    totalResult += storeService.updStore(store);
-                }
+                totalResult += storeBookService.delStoreBook(idsStr[i]);
             }
         }
         if (totalResult > 0)

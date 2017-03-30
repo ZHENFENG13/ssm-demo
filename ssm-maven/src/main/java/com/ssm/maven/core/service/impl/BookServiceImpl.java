@@ -43,39 +43,4 @@ public class BookServiceImpl implements BookService {
         return bookDao.getBookById(id);
     }
 
-    @Override
-    public Book getBookByISBN(String isbn) {
-        try {
-            return bookDao.getBookByISBN(isbn);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    @Override
-    public List<Book> searchBooks(Map<String, Object> map) {
-        try {
-            return bookDao.searchBooks(map);
-        } catch (Exception e) {
-            log.info("书籍搜索失败," + map.toString());
-        }
-        return null;
-    }
-
-    @Override
-    public Long getSearchBooks(Map<String, Object> map) {
-        return bookDao.getSearchBooks(map);
-    }
-
-    @Override
-    public List<Book> getCategoryBooks(Map<String, Object> map) {
-        return bookDao.getCategoryBooks(map);
-    }
-
-    @Override
-    public Long getTotalCategoryBooks(Map<String, Object> map) {
-        return bookDao.getTotalCategoryBooks(map);
-    }
-
 }
