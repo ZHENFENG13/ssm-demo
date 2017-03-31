@@ -3,7 +3,7 @@ package logger.test;
 import org.apache.log4j.Logger;
 
 /**
- * Created by shuaihan on 2017/3/27.
+ * Created by 13 on 2017/3/27.
  */
 public class LogTest {
     static Logger log = Logger.getLogger(LogTest.class);
