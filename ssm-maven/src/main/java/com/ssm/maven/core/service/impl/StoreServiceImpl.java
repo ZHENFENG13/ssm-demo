@@ -41,7 +41,10 @@ public class StoreServiceImpl implements StoreService {
             storeDao.insertStore(store);
         }
         store.setLevel(level + "");
-        return storeDao.insertStore(store);
+        int result = storeDao.insertStore(store);
+        //int i = 10 / 0;
+        //发生异常,操作回滚.
+        return result;
     }
 
     @Override
