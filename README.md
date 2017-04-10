@@ -32,3 +32,4 @@ MyBatis <br />
   2017-03-14 网友提醒:书架管理-查看书籍,JS报错 Cannot read property 'title' of null，数据原因，有些数据没删干净。 解决方法：delete from ssm_storebook where isbn not in (select id from ssm_book)。<br/>
   2017-03-29 Log模块<br/>
   2017-03-31 单元测试模块<br/>
+  2017-04-10 新增文章管理，easyUI整合UEditor<br/>
