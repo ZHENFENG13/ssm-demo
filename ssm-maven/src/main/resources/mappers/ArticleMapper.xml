@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.maven.core.dao.ArticleDao">
+	<resultMap type="Article" id="ArticleResult">
+		<result property="articleID" column="articleID" />
+		<result property="articleTitle" column="articleTitle" />
+		<result property="articleCreateDate" column="articleCreateDate" />
+		<result property="articleContent" column="articleContent" />
+		<result property="articleclassID" column="articleclassID" />
+		<result property="istop" column="istop" />
+		<result property="addname" column="addname" />
+	</resultMap>
+
+	<select id="findArticles" parameterType="Map" resultMap="ArticleResult">
+		select * from ssm_article
+		<where>
+			<if test="articleclassID!=null and articleclassID!='' ">
+				and articleclassID = #{articleclassID}
+			</if>
+			<if test="articleTitle!=null and articleTitle!='' ">
+				and articleTitle like #{articleTitle}
+			</if>
+		</where>
+		<if test="start!=null and size!=null">
+			limit #{start},#{size}
+		</if>
+	</select>
+
+	<select id="getTotalArticles" parameterType="Map" resultType="Long">
+		select count(*) from ssm_article
+		<where>
+			<if test="articleclassID!=null and articleclassID!='' ">
+				and articleclassID = #{articleclassID}
+			</if>
+			<if test="articleTitle!=null and articleTitle!='' ">
+				and articleTitle like #{articleTitle}
+			</if>
+		</where>
+	</select>
+	<insert id="insertArticle" parameterType="Article">
+		insert into
+		ssm_article
+		values(null,#{articleTitle},#{articleCreateDate},#{articleContent},#{articleclassID},0,#{addname})
+	</insert>
+
+	<update id="updArticle" parameterType="Article">
+		update ssm_article
+		set
+		articleTitle=#{articleTitle},articleContent=#{articleContent},
+		addname=#{addname}
+		where articleID=#{articleID}
+	</update>
+
+
+	<delete id="delArticle" parameterType="String">
+		delete from
+		ssm_article
+		where articleID=#{id}
+	</delete>
+
+	<select id="getArticleById" parameterType="String" resultMap="ArticleResult">
+		select *
+		from ssm_article where articleID=#{id}
+	</select>
+</mapper> 
