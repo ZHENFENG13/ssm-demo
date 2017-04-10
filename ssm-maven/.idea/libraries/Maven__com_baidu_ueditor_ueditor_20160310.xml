@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.baidu.ueditor:ueditor:20160310">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/baidu/ueditor/ueditor/20160310/ueditor-20160310.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/baidu/ueditor/ueditor/20160310/ueditor-20160310-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/baidu/ueditor/ueditor/20160310/ueditor-20160310-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

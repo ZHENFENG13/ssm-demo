@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>article</title>
+</head>
+<body>
+<div class="article" style="">
+
+</div>
+</body>
+<script type="text/javascript" src="jquery-easyui-1.3.3/jquery.min.js"></script>
+<script type="text/javascript">
+    function getQueryStringByName(name) {
+        var result = location.search.match(new RegExp("[\?\&]" + name + "=([^\&]+)", "i"));
+        if (result == null || result.length < 1) {
+            return "";
+        }
+        return result[1];
+    }
+
+    window.onload = function () {
+        $.ajax({
+            type: "post",
+            dataType: "json",
+            url: '/article/findById.do',
+            data: {"id": getQueryStringByName("id")},
+            success: function (data) {
+                if (data != null) {
+                    $('.article').html(data.articleContent);
+                    console.log(data.articleContent);
+                }
+                else {
+                    alert("无数据!");
+                }
+            }
+        });
+    }
+</script>
+</html>

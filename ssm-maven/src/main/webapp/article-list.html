@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>article-list</title>
+</head>
+<body>
+
+</body>
+<script>
+    window.onload = function () {
+        $.ajax({
+            type: "POST",
+            url: "/article/list",
+            contentType: "application/json; charset=utf-8",
+            data: "{}",
+            dataType: "json",
+            success: function (result) {
+                DisplayListItems(result);
+            },
+            "error": function (result) {
+                var response = result.responseText;
+                alert('Error loading: ' + response);
+            }
+        });
+    }
+
+    function DisplayListItems(list) {
+        $.each(list, function (index, element) {
+            var itemHTML = ["<li href='article.html?id='" + element.articleID + ">",
+                "<div>",
+                "<div>",
+                element.articleTitle,
+                "</div>",
+                "<div>",
+                element.addname,
+                "</div>",
+                "</div>",
+                "</li>"].join('\n');
+            $(".list > ul").append(itemHTML);
+        })
+    }
+</script>
+</html>
