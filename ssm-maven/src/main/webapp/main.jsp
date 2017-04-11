@@ -131,6 +131,14 @@
                     data-options="plain:true,iconCls:'icon-wenzhang'"
                     style="width: 150px;"> 文章管理</a>
         </div>
+        <div title="图片管理" data-options="iconCls:'icon-shouye'"
+             style="padding:10px">
+            <a
+                    href="javascript:openTab(' 图片设置','pictureManage.jsp?type=1&grade=1','icon-tupians')"
+                    class="easyui-linkbutton"
+                    data-options="plain:true,iconCls:'icon-tupian'"
+                    style="width: 150px;"> 图片设置</a>
+        </div>
         <div title="书架管理" data-options="iconCls:'icon-shujias'"
              style="padding:10px">
             <a
