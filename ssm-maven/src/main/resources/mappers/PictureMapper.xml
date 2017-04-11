@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.maven.core.dao.PictureDao">
+    <resultMap type="Picture" id="PictureResult">
+        <result property="id" column="id"/>
+        <result property="path" column="path"/>
+        <result property="type" column="type"/>
+        <result property="time" column="time"/>
+        <result property="url" column="url"/>
+        <result property="istop" column="istop"/>
+        <result property="grade" column="grade"/>
+    </resultMap>
+
+    <select id="findPictures" parameterType="Map" resultMap="PictureResult">
+        select * from ssm_picture
+        <where>
+            <if test="url!=null and url!='' ">
+                and url like #{url}
+            </if>
+            <if test="type!=null and type!='' ">
+                and type = #{type}
+            </if>
+            <if test="grade!=null and grade!='' ">
+                and grade = #{grade}
+            </if>
+        </where>
+        <if test="start!=null and size!=null">
+            limit #{start},#{size}
+        </if>
+        <if test="number!=null and number!=null">
+            limit #{number}
+        </if>
+    </select>
+
+    <select id="getTotalPictures" parameterType="Map" resultType="Long">
+        select count(*) from ssm_picture
+        <where>
+            <if test="url!=null and url!='' ">
+                and url = #{url}
+            </if>
+            <if test="type!=null and type!='' ">
+                and type = #{type}
+            </if>
+            <if test="grade!=null and grade!='' ">
+                and grade = #{grade}
+            </if>
+        </where>
+    </select>
+    <insert id="insertPicture" parameterType="Picture">
+		insert into ssm_picture
+		values(null,#{path},#{type},#{time},#{url},#{grade})
+	</insert>
+
+    <update id="updPicture" parameterType="Picture">
+		update ssm_picture
+		set
+		path=#{path},url=#{url},type=#{type},time=#{time},
+		grade=#{grade}
+		where id=#{id}
+	</update>
+
+
+    <delete id="delPicture" parameterType="String">
+		delete from
+		ssm_picture where id=#{id}
+	</delete>
+
+    <select id="findPictureById" parameterType="String" resultMap="PictureResult">
+		select *
+		from ssm_picture where id=#{id}
+	</select>
+</mapper> 
