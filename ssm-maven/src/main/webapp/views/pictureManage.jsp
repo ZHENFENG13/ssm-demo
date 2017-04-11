@@ -31,7 +31,7 @@
             src="${pageContext.request.contextPath}/js/common.js"></script>
 <body style="margin:1px;" id="ff">
 <table id="dg" title="图片信息管理" class="easyui-datagrid" pagination="true"
-       rownumbers="true" fit="true" data-options="pageSize:20"
+       rownumbers="true" fit="true" data-options="pageSize:10"
        url="${pageContext.request.contextPath}/picture/list.do?type=<%=type %>&grade=<%=grade %>"
        toolbar="#tb">
     <thead data-options="frozen:true">

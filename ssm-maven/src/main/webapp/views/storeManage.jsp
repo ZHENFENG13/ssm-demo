@@ -156,7 +156,7 @@
 </head>
 <body style="margin:1px;" id="ff">
 <table id="dg" title="书架管理" class="easyui-datagrid" pagination="true"
-       rownumbers="true" fit="true" data-options="pageSize:20"
+       rownumbers="true" fit="true" data-options="pageSize:10"
        url="${pageContext.request.contextPath}/store/list.do" toolbar="#tb">
     <thead data-options="frozen:true">
     <tr>
