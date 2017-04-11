@@ -1,0 +1,160 @@
+#item_hd,#order_hd {
+	height: 47px;
+	margin: 16px 0;
+	padding-left: 650px
+}
+
+#item_search_wrap,#order_search_wrap {
+	height: 45px;
+	border: 1px solid #b5b5bc;
+	border-radius: 4px
+}
+
+#item_search_key,#order_search_key {
+	height: 45px;
+	border: none;
+	border-radius: 4px;
+	background: url(../images/search_icon.png) 10px center no-repeat #fff;
+	text-indent: 40px
+}
+
+#item_search_hd,#order_search_hd {
+	text-indent: 20px;
+	margin: 16px 0
+}
+
+#tab_ul {
+	left: 0;
+	top: 0;
+	margin: 0;
+	width: 600px;
+	height: 45px;
+	line-height: 45px;
+	border-top: 1px solid #b5b5bc;
+	border-bottom: 1px solid #b5b5bc;
+	border-left: 1px solid #b5b5bc;
+	border-radius: 4px;
+	box-shadow: 0 1px 2px #999;
+	background: -webkit-gradient(linear, 50% 0, 50% 100%, from(#fff),
+		to(#f9f9fb) );
+	background: -webkit-linear-gradient(90deg, #f9f9fb, #fff);
+	background: -moz-linear-gradient(90deg, #f9f9fb, #fff);
+	background: -o-linear-gradient(90deg, #f9f9fb, #fff)
+}
+
+.tab_li {
+	width: 149px;
+	height: 100%;
+	border-right: 1px solid #b5b5bc;
+	display: block
+}
+
+.current_tab_li {
+	background-color: #414141;
+	color: #fff
+}
+
+.tab_arrow_down,.tab_arrow_up {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	right: 16px
+}
+
+.tab_arrow_up {
+	border-width: 0 4px 6px;
+	border-color: transparent transparent #414141;
+	top: 16px
+}
+
+.tab_arrow_down {
+	border-width: 6px 4px 0;
+	border-color: #414141 transparent transparent;
+	top: 24px
+}
+
+.current_tab_li .tab_arrow_up {
+	border-color: transparent transparent #fff
+}
+
+.current_tab_li .tab_arrow_down {
+	border-color: #fff transparent transparent
+}
+
+.current_tab_arrow_up {
+	border-color: transparent transparent #cd312d !important
+}
+
+.current_tab_arrow_down {
+	border-color: #cd312d transparent transparent !important
+}
+
+#list_wrap {
+	padding: 0 15px;
+	box-shadow: 1px 1px 1px 1px #e2e2e4;
+	background-color: #fff;
+}
+
+#list_hd,#list_page,#list_ul,.list_li {
+	display: block
+}
+
+#list_hd {
+	height: 54px
+}
+
+.list_hd_lineH {
+	padding: 0 !important;
+	line-height: 54px !important
+}
+
+#list_hd_line {
+	width: 100%;
+	height: 1px;
+	background-color: #bfbfbf;
+	overflow: hidden;
+	top: 54px;
+	left: 0
+}
+
+.list_li {
+	padding: 15px 0;
+	border-bottom: 1px dashed #dadae0
+}
+
+.del_item {
+	cursor: pointer
+}
+
+#list_page {
+	height: 40px;
+	padding: 24px 0
+}
+
+#next_page,#prev_page {
+	width: 110px;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 5px
+}
+
+#prev_page a:hover {
+	width: 95px;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 5px;
+}
+
+#page_num {
+	padding: 0 10px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #babac0;
+	border-radius: 4px
+}
+
+#list_loading {
+	width: 100%;
+	height: 110px;
+	display: block
+}
