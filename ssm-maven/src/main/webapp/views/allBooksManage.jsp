@@ -45,22 +45,21 @@
         <th field="cb" checkbox="true" align="center"></th>
         <th field="id" width="10" align="center" hidden="true">编号</th>
         <th field="subtitle" width="10" align="center" hidden="true">副标题</th>
-        <th field="title" width="300" align="center">书名</th>
-        <th field="intro" width="10" align="center" hidden="true">书籍简介</th>
-        <th field="author" width="200" align="center">作者</th>
+        <th field="title" width="110" align="center">书名</th>
+        <th field="author" width="70" align="center">作者</th>
         <th field="catalog" width="10" align="center" hidden="true">目录</th>
-        <th field="isbn" width="130" align="center">ISBN码</th>
-        <th field="path" width="110" align="center" formatter="formatProPic">图片</th>
-        <th field="marketPrice" width="80" align="center">市场价</th>
+        <th field="isbn" width="120" align="center">ISBN码</th>
+        <th field="path" width="100" align="center" formatter="formatProPic">图片</th>
+        <th field="marketPrice" width="70" align="center">市场价</th>
         <th field="pages" width="50" align="center">页数</th>
-        <th field="publisher" width="140" align="center">出版社</th>
+        <th field="publisher" width="120" align="center">出版社</th>
         <th field="binding" width="10" align="center" hidden="true">装订方式</th>
         <th field="hot" width="10" align="center" hidden="true">热度值</th>
-        <th field="status" width="60" align="center"
+        <th field="status" width="55" align="center"
             formatter="formatStatus">上架状态
         </th>
         <th field="supply" width="50" align="center">库存</th>
-        <th field="a" width="140" align="center" formatter="formatAction">操作</th>
+        <th field="a" width="110" align="center" formatter="formatAction">操作</th>
     </tr>
     </thead>
 </table>
