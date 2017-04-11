@@ -35,9 +35,9 @@
     <tr>
         <th field="cb" checkbox="true" align="center"></th>
         <th field="articleID" width="10%" align="center" hidden="true">编号</th>
-        <th field="articleTitle" width="300" align="center">标题</th>
-        <th field="articleCreateDate" width="300" align="center">创建时间</th>
-        <th field="addname" width="300" align="center">添加人</th>
+        <th field="articleTitle" width="200" align="center">标题</th>
+        <th field="articleCreateDate" width="150" align="center">创建时间</th>
+        <th field="addname" width="150" align="center">添加人</th>
     </tr>
     </thead>
 </table>

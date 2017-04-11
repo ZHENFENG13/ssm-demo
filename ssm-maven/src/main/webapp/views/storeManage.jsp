@@ -162,11 +162,11 @@
     <tr>
         <th field="cb" checkbox="true" align="center"></th>
         <th field="id" width="10%" align="center" hidden="true">编号</th>
-        <th field="number" width="200" align="center">书架编号</th>
-        <th field="level" width="200" align="center" formatter="Level">层数</th>
-        <th field="page" width="200" align="center">总页码</th>
-        <th field="status" width="200" align="center" formatter="Status">书架状态</th>
-        <th field="a" width="200" align="center" formatter="formatAction">操作</th>
+        <th field="number" width="100" align="center">书架编号</th>
+        <th field="level" width="100" align="center" formatter="Level">层数</th>
+        <th field="page" width="100" align="center">总页码</th>
+        <th field="status" width="100" align="center" formatter="Status">书架状态</th>
+        <th field="a" width="100" align="center" formatter="formatAction">操作</th>
     </tr>
     </thead>
 </table>

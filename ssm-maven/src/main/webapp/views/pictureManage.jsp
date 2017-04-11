@@ -39,8 +39,8 @@
         <th field="cb" checkbox="true" align="center"></th>
         <th field="id" width="10%" align="center" hidden="true">编号</th>
         <th field="path" width="300" align="center" formatter="formatProPic">缩略图</th>
-        <th field="time" width="300" align="center">创建时间</th>
-        <th field="url" width="300" align="center">图片链接</th>
+        <th field="time" width="150" align="center">创建时间</th>
+        <th field="url" width="150" align="center">图片链接</th>
     </tr>
     </thead>
 </table>

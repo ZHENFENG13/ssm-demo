@@ -97,9 +97,9 @@
     <tr>
         <th field="cb" checkbox="true" align="center"></th>
         <th field="id" width="10%" align="center" hidden="true">编号</th>
-        <th field="store.number" width="300" align="center">书架编号</th>
-        <th field="store.level" width="300" align="center">层数</th>
-        <th field="number" width="300" align="center">数量</th>
+        <th field="store.number" width="150" align="center">书架编号</th>
+        <th field="store.level" width="150" align="center">层数</th>
+        <th field="number" width="150" align="center">数量</th>
     </tr>
     </thead>
 </table>

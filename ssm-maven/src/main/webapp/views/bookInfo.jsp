@@ -103,11 +103,11 @@
     <tr>
         <th field="cb" checkbox="true" align="center"></th>
         <th field="id" width="10%" align="center" hidden="true">编号</th>
-        <th field="book.title" width="300" align="center">书名</th>
-        <th field="book.path" width="300" align="center"
+        <th field="book.title" width="200" align="center">书名</th>
+        <th field="book.path" width="200" align="center"
             formatter="formatProPic">封面
         </th>
-        <th field="number" width="300" align="center">数量</th>
+        <th field="number" width="200" align="center">数量</th>
     </tr>
     </thead>
 </table>
