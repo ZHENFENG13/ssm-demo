@@ -59,7 +59,7 @@
 </div>
 
 <div id="dlg" class="easyui-dialog"
-     style="width: 1050px;height:695px;padding: 10px 20px; position: relative; z-index:1000;"
+     style="width: 850px;height:555px;padding: 10px 20px; position: relative; z-index:1000;"
      closed="true" buttons="#dlg-buttons">
     <form id="fm" method="post">
         <table cellspacing="8px">
@@ -97,8 +97,8 @@
     var url;
     function ResetEditor() {
         UE.getEditor('myEditor', {
-            initialFrameHeight: 680,
-            initialFrameWidth: 960,
+            initialFrameHeight: 480,
+            initialFrameWidth: 660,
             enableAutoSave: false,
             elementPathEnabled: false,
             wordCount: false,
