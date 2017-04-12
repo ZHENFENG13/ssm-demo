@@ -37,10 +37,6 @@
             }
         }
 
-        function openPasswordModifyDialog() {
-            $("#dlg").dialog("open").dialog("setTitle", "修改密码");
-            url = "${pageContext.request.contextPath}/user/modifyPassword.do?id=${currentUser.id}";
-        }
 
         function closePasswordModifyDialog() {
             $("#dlg").dialog("close");
@@ -160,10 +156,7 @@
             <a href="javascript:openTab(' 管理员列表','userManage.jsp','icon-lxr')"
                class="easyui-linkbutton"
                data-options="plain:true,iconCls:'icon-lxr'" style="width: 150px;">
-                管理员列表</a> <a href="javascript:openPasswordModifyDialog()"
-                             class="easyui-linkbutton"
-                             data-options="plain:true,iconCls:'icon-modifyPassword'"
-                             style="width: 150px;"> 修改密码</a> <a href="javascript:logout()"
+                管理员列表</a><a href="javascript:logout()"
                                                                 class="easyui-linkbutton"
                                                                 data-options="plain:true,iconCls:'icon-exit'"
                                                                 style="width: 150px;">
