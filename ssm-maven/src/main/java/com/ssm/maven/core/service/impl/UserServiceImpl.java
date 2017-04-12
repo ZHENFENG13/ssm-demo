@@ -34,6 +34,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public int updateUser(User user) {
+        //防止有人胡乱修改导致其他人无法正常登陆
+        if ("admin".equals(user.getUserName())) {
+            return 0;
+        }
         return userDao.updateUser(user);
     }
 
@@ -49,6 +53,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public int deleteUser(Integer id) {
+        //防止有人胡乱修改导致其他人无法正常登陆
+        if (2 == id) {
+            return 0;
+        }
         return userDao.deleteUser(id);
     }
 
