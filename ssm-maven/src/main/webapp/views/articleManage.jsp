@@ -163,7 +163,13 @@
         $('#editor').append(html);
         ResetEditor(editor);
         var ue = UE.getEditor('myEditor');
-        ue.setContent("");
+        //不能创建editor之后马上使用ueditor.setContent('文本内容');
+        //要等到创建完成之后才可以使用
+        ue.addListener("ready", function () {
+            // editor准备好之后才可以使用
+            ue.setContent("");
+
+        });
         $("#dlg").dialog("open").dialog("setTitle", "添加文本信息");
         url = "${pageContext.request.contextPath}/article/save.do";
     }
@@ -196,7 +202,11 @@
         $('#editor').append(html);
         ResetEditor(editor);
         var ue = UE.getEditor('myEditor');
-        ue.setContent(row.articleContent);
+        //要等到创建完成之后才可以使用
+        ue.addListener("ready", function () {
+            // editor准备好之后才可以使用
+            ue.setContent(row.articleContent);
+        });
         url = "${pageContext.request.contextPath}/article/save.do?articleID="
                 + row.articleID;
     }
