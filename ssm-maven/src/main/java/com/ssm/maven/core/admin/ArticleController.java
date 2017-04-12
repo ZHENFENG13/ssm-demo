@@ -51,7 +51,6 @@ public class ArticleController {
 			map.put("size", pageBean.getPageSize());
 		}
 		if (article != null) {
-			map.put("articleClassID", article.getArticleClassID() + "");
 			map.put("articleTitle",
 					StringUtil.formatLike(article.getArticleTitle()));
 		}
