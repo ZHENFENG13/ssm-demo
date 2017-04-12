@@ -19,10 +19,10 @@
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="url"
-                  value="jdbc:mysql://xx.xx.xx.xx:xx/db?useUnicode=true&amp;characterEncoding=UTF-8  "/>
+                  value="jdbc:mysql://127.0.0.1:3306/ssm_db?useUnicode=true&amp;characterEncoding=UTF-8  "/>
         <!-- 改为你的地址即可 -->
-        <property name="username" value="xxxx"/>
-        <property name="password" value="xxxx"/>
+        <property name="username" value="root"/>
+        <property name="password" value="admin"/>
     </bean>
 
 
