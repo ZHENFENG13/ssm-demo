@@ -7,7 +7,7 @@ public class Article implements Serializable {
     private String articleTitle;//文章标题
     private String articleCreateDate;//创建日期
     private String articleContent;//文章内容
-    private int articleclassID;//文章类别id
+    private int articleClassID;//文章类别id
     private int isTop;//置顶字段
     private String addName;//添加者
 
@@ -43,12 +43,12 @@ public class Article implements Serializable {
         this.articleContent = articleContent;
     }
 
-    public int getArticleclassID() {
-        return articleclassID;
+    public int getArticleClassID() {
+        return articleClassID;
     }
 
-    public void setArticleclassID(int articleclassID) {
-        this.articleclassID = articleclassID;
+    public void setArticleClassID(int articleClassID) {
+        this.articleClassID = articleClassID;
     }
 
     public int getIsTop() {
@@ -65,5 +65,18 @@ public class Article implements Serializable {
 
     public void setAddName(String addName) {
         this.addName = addName;
+    }
+
+    @Override
+    public String toString() {
+        return "Article{" +
+                "id='" + id + '\'' +
+                ", articleTitle='" + articleTitle + '\'' +
+                ", articleCreateDate='" + articleCreateDate + '\'' +
+                ", articleContent='" + articleContent + '\'' +
+                ", articleClassID=" + articleClassID +
+                ", isTop=" + isTop +
+                ", addName='" + addName + '\'' +
+                '}';
     }
 }

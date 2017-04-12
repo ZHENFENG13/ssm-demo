@@ -34,10 +34,10 @@
     <thead data-options="frozen:true">
     <tr>
         <th field="cb" checkbox="true" align="center"></th>
-        <th field="articleID" width="10%" align="center" hidden="true">编号</th>
+        <th field="id" width="10%" align="center" hidden="true">编号</th>
         <th field="articleTitle" width="200" align="center">标题</th>
         <th field="articleCreateDate" width="150" align="center">创建时间</th>
-        <th field="addname" width="150" align="center">添加人</th>
+        <th field="addName" width="150" align="center">添加人</th>
     </tr>
     </thead>
 </table>
@@ -72,7 +72,7 @@
             </tr>
             <tr>
                 <td>添加人：</td>
-                <td><input type="text" id="addname" name="addname"/>
+                <td><input type="text" id="addName" name="addName"/>
                     <input type="text" id="articleCreateDate" name="articleCreateDate" type="hidden"
                            style="display:none;"/>
                 </td>
@@ -124,7 +124,7 @@
         }
         var strIds = [];
         for (var i = 0; i < selectedRows.length; i++) {
-            strIds.push(selectedRows[i].articleID);
+            strIds.push(selectedRows[i].id);
         }
         var ids = strIds.join(",");
         $.messager
@@ -197,13 +197,13 @@
         ResetEditor(editor);
         var ue = UE.getEditor('myEditor');
         ue.setContent(row.articleContent);
-        url = "${pageContext.request.contextPath}/article/save.do?articleID="
-                + row.articleID;
+        url = "${pageContext.request.contextPath}/article/save.do?id="
+                + row.id;
     }
 
     function resetValue() {
         $("#title").val("");
-        $("#addname").val("");
+        $("#addName").val("");
         $("#container").val("");
         ResetEditor();
     }

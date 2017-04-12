@@ -51,7 +51,7 @@ public class ArticleController {
 			map.put("size", pageBean.getPageSize());
 		}
 		if (article != null) {
-			map.put("articleclassID", article.getArticleclassID() + "");
+			map.put("articleClassID", article.getArticleClassID() + "");
 			map.put("articleTitle",
 					StringUtil.formatLike(article.getArticleTitle()));
 		}
@@ -78,7 +78,7 @@ public class ArticleController {
 	public String save(Article article, HttpServletResponse response)
 			throws Exception {
 		int resultTotal = 0;
-		if (article.getArticleID() == null) {
+		if (article.getId() == null) {
 			article.setArticleCreateDate(DateUtil.getCurrentDateStr());
 			resultTotal = articleService.addArticle(article);
 		} else {
