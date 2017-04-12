@@ -3,29 +3,20 @@ package com.ssm.maven.core.entity;
 import java.io.Serializable;
 
 public class Article implements Serializable {
-    @Override
-    public String toString() {
-        return "Article [articleID=" + articleID + ", articleTitle="
-                + articleTitle + ", articleCreateDate=" + articleCreateDate
-                + ", articleContent=" + articleContent + ", articleclassID="
-                + articleclassID + ", istop=" + istop + ", addname=" + addname
-                + "]";
-    }
-
-    private String articleID;//主键
+    private String id;//主键
     private String articleTitle;//文章标题
     private String articleCreateDate;//创建日期
     private String articleContent;//文章内容
     private int articleclassID;//文章类别id
-    private int istop;//置顶字段
-    private String addname;//添加者
+    private int isTop;//置顶字段
+    private String addName;//添加者
 
-    public String getArticleID() {
-        return articleID;
+    public String getId() {
+        return id;
     }
 
-    public void setArticleID(String articleID) {
-        this.articleID = articleID;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getArticleTitle() {
@@ -60,19 +51,19 @@ public class Article implements Serializable {
         this.articleclassID = articleclassID;
     }
 
-    public int getIstop() {
-        return istop;
+    public int getIsTop() {
+        return isTop;
     }
 
-    public void setIstop(int istop) {
-        this.istop = istop;
+    public void setIsTop(int isTop) {
+        this.isTop = isTop;
     }
 
-    public String getAddname() {
-        return addname;
+    public String getAddName() {
+        return addName;
     }
 
-    public void setAddname(String addname) {
-        this.addname = addname;
+    public void setAddName(String addName) {
+        this.addName = addName;
     }
 }
