@@ -3,6 +3,6 @@
 <%--防强值跳转 --%>
 <%
     if (session.getAttribute("currentUser") == null) {
-        out.println("<script>alert('登录超时，请先登录！');window.location.href='login.jsp';</script>");
+        out.println("<script>window.location.href='login.jsp';</script>");
     }
 %>
