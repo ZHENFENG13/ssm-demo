@@ -104,12 +104,16 @@
         <div title="首页" data-options="iconCls:'icon-home'">
             <div align="center" style="padding-top: 50px;"><a
                     href="http://download.csdn.net/detail/zhenfengshisan/9765855"
-                    target="_blank" style="font-size: 20px;">项目源码下载</a>
+                    target="_blank" style="font-size: 20px;">项目源码下载1(非maven)</a>
             </div>
-            <div align="center" style="padding-top: 50px;"><a href="https://github.com/ZHENFENG13/ssm-demo"
+            <div align="center" style="padding-top: 20px;"><a
+                    href="http://download.csdn.net/detail/zhenfengshisan/9811684"
+                    target="_blank" style="font-size: 20px;">项目源码下载2(maven项目)</a>
+            </div>
+            <div align="center" style="padding-top: 20px;"><a href="https://github.com/ZHENFENG13/ssm-demo"
                                                               target="_blank"
                                                               style="font-size: 20px;">github地址</a></div>
-            <div align="center" style="padding-top: 100px">
+            <div align="center" style="padding-top: 50px">
                 <font color="grey" size="10">ssm demo</font>
             </div>
         </div>
