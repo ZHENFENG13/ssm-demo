@@ -139,14 +139,6 @@
                     data-options="plain:true,iconCls:'icon-tupian'"
                     style="width: 150px;"> 图片设置</a>
         </div>
-        <div title="书架管理" data-options="iconCls:'icon-shujias'"
-             style="padding:10px">
-            <a
-                    href="javascript:openTab(' 书架管理','storeManage.jsp','icon-shujia')"
-                    class="easyui-linkbutton"
-                    data-options="plain:true,iconCls:'icon-shujia'"
-                    style="width: 150px;"> 书架管理</a>
-        </div>
         <div title="书籍管理" data-options="iconCls:'icon-shuji'"
              style="padding:10px">
             <a
