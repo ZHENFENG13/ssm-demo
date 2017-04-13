@@ -24,7 +24,6 @@ public class Book implements Serializable {
     private int supply;// 库存
     private String status;// 状态
     private int hot;// 热度值
-    private String indate;// 入库日期
     List<Store> stores;
 
     public String getId() {
@@ -163,14 +162,6 @@ public class Book implements Serializable {
         this.hot = hot;
     }
 
-    public String getIndate() {
-        return indate;
-    }
-
-    public void setIndate(String indate) {
-        this.indate = indate;
-    }
-
     @Override
     public String toString() {
         return "Book{" +
@@ -190,7 +181,6 @@ public class Book implements Serializable {
                 ", supply=" + supply +
                 ", status='" + status + '\'' +
                 ", hot=" + hot +
-                ", indate='" + indate + '\'' +
                 ", stores=" + stores +
                 '}';
     }

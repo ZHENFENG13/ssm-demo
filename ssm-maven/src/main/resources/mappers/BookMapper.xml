@@ -20,7 +20,6 @@
         <result property="supply" column="supply"/>
         <result property="status" column="status"/>
         <result property="hot" column="hot"/>
-        <result property="indate" column="indate"/>
     </resultMap>
 
     <select id="findBooks" parameterType="Map" resultMap="BookResult">
