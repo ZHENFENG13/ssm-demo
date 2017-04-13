@@ -24,18 +24,9 @@ public class Book implements Serializable {
     private int supply;// 库存
     private String status;// 状态
     private int hot;// 热度值
-    List<Store> stores;
 
     public String getId() {
         return id;
-    }
-
-    public List<Store> getStores() {
-        return stores;
-    }
-
-    public void setStores(List<Store> stores) {
-        this.stores = stores;
     }
 
     public void setId(String id) {
@@ -181,7 +172,6 @@ public class Book implements Serializable {
                 ", supply=" + supply +
                 ", status='" + status + '\'' +
                 ", hot=" + hot +
-                ", stores=" + stores +
                 '}';
     }
 }

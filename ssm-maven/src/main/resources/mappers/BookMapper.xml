@@ -35,7 +35,7 @@
                 and isbn = #{isbn}
             </if>
         </where>
-        ORDER BY indate desc
+        ORDER BY id desc
         <if test="start!=null and size!=null">
             limit #{start},#{size}
         </if>
