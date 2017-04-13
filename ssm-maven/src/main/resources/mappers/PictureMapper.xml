@@ -9,7 +9,6 @@
         <result property="type" column="type"/>
         <result property="time" column="time"/>
         <result property="url" column="url"/>
-        <result property="istop" column="istop"/>
         <result property="grade" column="grade"/>
     </resultMap>
 

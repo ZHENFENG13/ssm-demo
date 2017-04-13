@@ -9,8 +9,8 @@
         <result property="path" column="path"/>
         <result property="title" column="title"/>
         <result property="subtitle" column="subtitle"/>
-        <result property="originalTitle" column="originalTitle"/>
-        <result property="marketPrice" column="marketPrice"/>
+        <result property="originalTitle" column="original_title"/>
+        <result property="marketPrice" column="market_price"/>
         <result property="intro" column="intro"/>
         <result property="binding" column="binding"/>
         <result property="pages" column="pages"/>
