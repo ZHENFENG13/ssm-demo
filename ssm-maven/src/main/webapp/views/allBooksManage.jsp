@@ -59,7 +59,6 @@
             formatter="formatStatus">上架状态
         </th>
         <th field="supply" width="50" align="center">库存</th>
-        <th field="a" width="110" align="center" formatter="formatAction">操作</th>
     </tr>
     </thead>
 </table>
@@ -113,10 +112,5 @@
             return "<div style='color:gray;'>未上架</div>";
     }
 
-    function formatAction(val, row) {
-        return "<a href='javascript:openbookInfoPage("
-                + row.id
-                + ")' style='color:blue;'>书籍摆放信息</a>";
-    }
 </script>
 </html>
