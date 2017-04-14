@@ -36,7 +36,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="insertArticle" parameterType="Article">
 		insert into
 		ssm_article
-		values(null,#{articleTitle},#{articleCreateDate},#{articleContent},0,0,#{addName})
+		values(null,#{articleTitle},#{articleCreateDate},#{articleContent},0,#{addName})
 	</insert>
 
 	<update id="updArticle" parameterType="Article">
