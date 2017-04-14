@@ -58,7 +58,6 @@ public class BookController {
                 !"".equals(book.getIsbn())) {
             map.put("isbn", book.getIsbn() + "");
         }
-        map.put("sort", "indate desc");
         bookList = bookService.findBooks(map);
         total = bookService.getTotalBooks(map);
         JSONObject result = new JSONObject();
