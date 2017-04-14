@@ -102,6 +102,10 @@
 <div region="center">
     <div class="easyui-tabs" fit="true" border="false" id="tabs">
         <div title="首页" data-options="iconCls:'icon-home'">
+            <div align="center" style="padding-top: 20px;"><a
+                    href="http://download.csdn.net/detail/zhenfengshisan/9813721"
+                    target="_blank" style="font-size: 20px;">项目源码下载3(最新代码)</a>
+            </div>
             <div align="center" style="padding-top: 50px;"><a
                     href="http://download.csdn.net/detail/zhenfengshisan/9765855"
                     target="_blank" style="font-size: 20px;">项目源码下载1(非maven)</a>
@@ -153,9 +157,9 @@
                class="easyui-linkbutton"
                data-options="plain:true,iconCls:'icon-lxr'" style="width: 150px;">
                 管理员列表</a><a href="javascript:logout()"
-                                                                class="easyui-linkbutton"
-                                                                data-options="plain:true,iconCls:'icon-exit'"
-                                                                style="width: 150px;">
+                            class="easyui-linkbutton"
+                            data-options="plain:true,iconCls:'icon-exit'"
+                            style="width: 150px;">
             安全退出</a>
         </div>
     </div>
