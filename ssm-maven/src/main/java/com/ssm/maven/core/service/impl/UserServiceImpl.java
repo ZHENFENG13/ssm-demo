@@ -34,7 +34,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public int updateUser(User user) {
-        //·ÀÖ¹ÓĞÈËºúÂÒĞŞ¸Äµ¼ÖÂÆäËûÈËÎŞ·¨Õı³£µÇÂ½
+        //é˜²æ­¢æœ‰äººèƒ¡ä¹±ä¿®æ”¹å¯¼è‡´å…¶ä»–äººæ— æ³•æ­£å¸¸ç™»é™†
         if ("admin".equals(user.getUserName())) {
             return 0;
         }
@@ -48,12 +48,15 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public int addUser(User user) {
+        if (user.getUserName() == null || user.getPassword() == null || getTotalUser(null) > 90) {
+            return 0;
+        }
         return userDao.addUser(user);
     }
 
     @Override
     public int deleteUser(Integer id) {
-        //·ÀÖ¹ÓĞÈËºúÂÒĞŞ¸Äµ¼ÖÂÆäËûÈËÎŞ·¨Õı³£µÇÂ½
+        //é˜²æ­¢æœ‰äººèƒ¡ä¹±ä¿®æ”¹å¯¼è‡´å…¶ä»–äººæ— æ³•æ­£å¸¸ç™»é™†
         if (2 == id) {
             return 0;
         }

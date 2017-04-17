@@ -14,37 +14,40 @@ import org.springframework.stereotype.Service;
 @Service("articleService")
 public class ArticleServiceImpl implements ArticleService {
 
-	@Resource
-	private ArticleDao articleDao;
+    @Resource
+    private ArticleDao articleDao;
 
-	@Override
-	public List<Article> findArticle(Map<String, Object> map) {
-		return articleDao.findArticles(map);
-	}
+    @Override
+    public List<Article> findArticle(Map<String, Object> map) {
+        return articleDao.findArticles(map);
+    }
 
-	@Override
-	public Long getTotalArticle(Map<String, Object> map) {
-		return articleDao.getTotalArticles(map);
-	}
+    @Override
+    public Long getTotalArticle(Map<String, Object> map) {
+        return articleDao.getTotalArticles(map);
+    }
 
-	@Override
-	public int addArticle(Article article) {
-		return articleDao.insertArticle(article);
-	}
+    @Override
+    public int addArticle(Article article) {
+        if (article.getArticleTitle() == null || article.getArticleContent() == null || getTotalArticle(null) > 90) {
+            return 0;
+        }
+        return articleDao.insertArticle(article);
+    }
 
-	@Override
-	public int updateArticle(Article article) {
-		return articleDao.updArticle(article);
-	}
+    @Override
+    public int updateArticle(Article article) {
+        return articleDao.updArticle(article);
+    }
 
-	@Override
-	public int deleteArticle(String id) {
-		return articleDao.delArticle(id);
-	}
+    @Override
+    public int deleteArticle(String id) {
+        return articleDao.delArticle(id);
+    }
 
-	@Override
-	public Article findById(String id) {
-		return articleDao.getArticleById(id);
-	}
+    @Override
+    public Article findById(String id) {
+        return articleDao.getArticleById(id);
+    }
 
 }

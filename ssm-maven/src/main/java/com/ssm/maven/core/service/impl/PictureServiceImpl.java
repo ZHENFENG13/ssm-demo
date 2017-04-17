@@ -1,5 +1,6 @@
 package com.ssm.maven.core.service.impl;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -28,6 +29,9 @@ public class PictureServiceImpl implements PictureService {
 
     @Override
     public int addPicture(Picture picture) {
+        if (picture.getPath() == null || getTotalPicture(null) > 90) {
+            return 0;
+        }
         return pd.insertPicture(picture);
     }
 
