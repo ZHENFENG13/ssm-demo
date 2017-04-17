@@ -23,7 +23,7 @@ import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppC
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-@ContextConfiguration({"classpath*:/applicationContext.xml", "classpath*:/spring-mvc.xml", "classpath*:/mybatis-config.xml"})
+@ContextConfiguration({"classpath*:/spring-context.xml", "classpath*:/spring-context-mvc.xml", "classpath*:/mybatis-config.xml"})
 public class BookControllerTest {
     @Autowired
     private WebApplicationContext wac;

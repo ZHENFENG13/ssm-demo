@@ -13,33 +13,9 @@
     <!-- 自动扫描 -->
     <context:component-scan base-package="com.ssm.maven.core.dao"/>
     <context:component-scan base-package="com.ssm.maven.core.service"/>
-    
-    <!-- 配置数据源 -->
-    <bean id="dataSource"
-          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url"
-                  value="jdbc:mysql://127.0.0.1:3306/ssm_db?useUnicode=true&amp;characterEncoding=UTF-8  "/>
-        <!-- 改为你的地址即可 -->
-        <property name="username" value="root"/>
-        <property name="password" value="admin"/>
-    </bean>
 
-
-    <!-- 配置mybatis的sqlSessionFactory -->
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource"/>
-        <!-- 自动扫描mappers.xml文件 -->
-        <property name="mapperLocations" value="classpath:/mappers/*.xml"></property>
-        <!-- mybatis配置文件 -->
-        <property name="configLocation" value="classpath:mybatis-config.xml"></property>
-    </bean>
-
-    <!-- DAO接口所在包名，Spring会自动查找其下的类 -->
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.ssm.maven.core.dao"/>
-        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
-    </bean>
+    <!-- mybatis及数据源配置 -->
+    <import resource="classpath:spring-context-mybatis.xml"/>
 
     <!-- (事务管理)transaction manager, use JtaTransactionManager for global tx -->
     <bean id="transactionManager"

@@ -12,7 +12,7 @@
     </welcome-file-list>
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:applicationContext.xml</param-value>
+        <param-value>classpath:spring-context.xml</param-value>
     </context-param>
 
     <filter>
@@ -38,7 +38,7 @@
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>classpath:spring-mvc.xml</param-value>
+            <param-value>classpath:spring-context-mvc.xml</param-value>
         </init-param>
         <!--加载顺序为1 -->
         <load-on-startup>1</load-on-startup>

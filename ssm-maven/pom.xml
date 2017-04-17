@@ -190,6 +190,15 @@
             <version>1.1.2-edit-1.0</version>
         </dependency>
         <!-- End: 百度UEditor -->
+
+        <!-- Start: druid -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.0.24</version>
+        </dependency>
+        <!-- End: druid -->
+
     </dependencies>
 
     <build>
