@@ -14,6 +14,7 @@ hs_err_pid*
 ###my own###
 target
 logs
+jdbc-druid-config.properties
 
 ### IntelliJ IDEA ###
 .idea
