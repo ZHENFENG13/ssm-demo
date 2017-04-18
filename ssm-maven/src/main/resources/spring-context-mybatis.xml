@@ -41,23 +41,42 @@
         <!-- 配置获取连接等待超时的时间 -->
         <property name="maxWait" value="${druid.maxWait}"/>
         <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
-        <property name="timeBetweenEvictionRunsMillis" value="${druid.timeBetweenEvictionRunsMillis}" />
+        <property name="timeBetweenEvictionRunsMillis" value="${druid.timeBetweenEvictionRunsMillis}"/>
 
         <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
-        <property name="minEvictableIdleTimeMillis" value="${druid.minEvictableIdleTimeMillis}" />
+        <property name="minEvictableIdleTimeMillis" value="${druid.minEvictableIdleTimeMillis}"/>
 
-        <property name="validationQuery" value="${druid.validationQuery}" />
-        <property name="testWhileIdle" value="${druid.testWhileIdle}" />
-        <property name="testOnBorrow" value="${druid.testOnBorrow}" />
-        <property name="testOnReturn" value="${druid.testOnReturn}" />
+        <property name="validationQuery" value="${druid.validationQuery}"/>
+        <property name="testWhileIdle" value="${druid.testWhileIdle}"/>
+        <property name="testOnBorrow" value="${druid.testOnBorrow}"/>
+        <property name="testOnReturn" value="${druid.testOnReturn}"/>
 
         <!-- 打开PSCache，并且指定每个连接上PSCache的大小  如果用Oracle，则把poolPreparedStatements配置为true，mysql可以配置为false。-->
-        <property name="poolPreparedStatements" value="${druid.poolPreparedStatements}" />
-        <property name="maxPoolPreparedStatementPerConnectionSize" value="${druid.maxPoolPreparedStatementPerConnectionSize}" />
+        <property name="poolPreparedStatements" value="${druid.poolPreparedStatements}"/>
+        <property name="maxPoolPreparedStatementPerConnectionSize"
+                  value="${druid.maxPoolPreparedStatementPerConnectionSize}"/>
 
         <!-- 配置监控统计拦截的filters -->
-        <property name="filters" value="${druid.filters}" />
+        <property name="filters" value="${druid.filters}"/>
 
+        <property name="proxyFilters">
+            <list>
+                <ref bean="stat-filter"/>
+                <ref bean="log-filter"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- 慢SQL记录 -->
+    <bean id="stat-filter" class="com.alibaba.druid.filter.stat.StatFilter">
+        <property name="mergeSql" value="true"/>
+        <property name="slowSqlMillis" value="100"/>
+        <property name="logSlowSql" value="true"/>
+    </bean>
+
+    <bean id="log-filter" class="com.alibaba.druid.filter.logging.Log4jFilter">
+        <property name="dataSourceLogEnabled" value="true" />
+        <property name="statementExecutableSqlLogEnable" value="true" />
     </bean>
 
 </beans>
