@@ -59,18 +59,22 @@
         <!-- 配置监控统计拦截的filters -->
         <property name="filters" value="${druid.filters}"/>
 
+        <!--Start 慢sql监控及log4j设置-->
         <property name="proxyFilters">
             <list>
                 <ref bean="stat-filter"/>
                 <ref bean="log-filter"/>
             </list>
         </property>
+        <!--End 慢sql监控及log4j设置,不想监控的话将proxyFilters属性删除即可 -->
+
     </bean>
 
     <!-- 慢SQL记录 -->
     <bean id="stat-filter" class="com.alibaba.druid.filter.stat.StatFilter">
         <property name="mergeSql" value="true"/>
-        <property name="slowSqlMillis" value="100"/>
+        <!-- 慢sql时间设置,即执行时间大于200毫秒的都是慢sql -->
+        <property name="slowSqlMillis" value="200"/>
         <property name="logSlowSql" value="true"/>
     </bean>
 

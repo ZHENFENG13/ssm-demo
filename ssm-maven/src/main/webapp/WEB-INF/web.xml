@@ -62,29 +62,29 @@
     <!--错误页面配置 -->
 
     <!--druid监控页面 -->
-    <servlet>
+    <!--<servlet>
         <servlet-name>DruidStatView</servlet-name>
         <servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
         <init-param>
-            <!-- 不允许清空统计数据 -->
+            &lt;!&ndash; 不允许清空统计数据 &ndash;&gt;
             <param-name>resetEnable</param-name>
             <param-value>false</param-value>
         </init-param>
         <init-param>
-            <!-- 用户名 -->
+            &lt;!&ndash; 用户名 &ndash;&gt;
             <param-name>loginUsername</param-name>
-            <param-value>your-name</param-value>
+            <param-value>yourname</param-value>
         </init-param>
         <init-param>
-            <!-- 密码 -->
+            &lt;!&ndash; 密码 &ndash;&gt;
             <param-name>loginPassword</param-name>
-            <param-value>your-password</param-value>
+            <param-value>yourpassword</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>DruidStatView</servlet-name>
         <url-pattern>/druid/*</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping>-->
     <!--druid监控页面 -->
 
 </web-app>

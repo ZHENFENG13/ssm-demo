@@ -5,6 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+    <!-- 监控spring的切面,如果不想监控,将此文件删除即可-->
     <bean id="druid-stat-interceptor"
           class="com.alibaba.druid.support.spring.stat.DruidStatInterceptor">
     </bean>
