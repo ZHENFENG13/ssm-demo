@@ -62,21 +62,21 @@
     <!--错误页面配置 -->
 
     <!--druid监控页面 -->
-    <!--<servlet>
+    <servlet>
         <servlet-name>DruidStatView</servlet-name>
         <servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
         <init-param>
-            &lt;!&ndash; 不允许清空统计数据 &ndash;&gt;
+            <!-- 不允许清空统计数据 -->
             <param-name>resetEnable</param-name>
             <param-value>false</param-value>
         </init-param>
         <init-param>
-            &lt;!&ndash; 用户名 &ndash;&gt;
+            <!-- 用户名 -->
             <param-name>loginUsername</param-name>
             <param-value>yourname</param-value>
         </init-param>
         <init-param>
-            &lt;!&ndash; 密码 &ndash;&gt;
+            <!-- 密码 -->
             <param-name>loginPassword</param-name>
             <param-value>yourpassword</param-value>
         </init-param>
@@ -84,7 +84,33 @@
     <servlet-mapping>
         <servlet-name>DruidStatView</servlet-name>
         <url-pattern>/druid/*</url-pattern>
-    </servlet-mapping>-->
+    </servlet-mapping>
+    <!-- 添加Web应用等监控-->
+    <filter>
+        <filter-name>DruidWebStatFilter</filter-name>
+        <filter-class>com.alibaba.druid.support.http.WebStatFilter</filter-class>
+        <init-param>
+            <param-name>exclusions</param-name>
+            <param-value>*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*</param-value>
+        </init-param>
+        <init-param>
+            <param-name>profileEnable</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>principalCookieName</param-name>
+            <param-value>ssm-admin</param-value>
+        </init-param>
+        <init-param>
+            <param-name>principalSessionName</param-name>
+            <param-value>ssm-admin-session</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>DruidWebStatFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!-- 添加Web应用等监控-->
     <!--druid监控页面 -->
 
 </web-app>
