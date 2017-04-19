@@ -29,7 +29,7 @@ public class PictureServiceImpl implements PictureService {
 
     @Override
     public int addPicture(Picture picture) {
-        if (picture.getPath() == null || getTotalPicture(null) > 90) {
+        if (picture.getPath() == null || getTotalPicture(null) > 90 || picture.getPath().length() > 100 || picture.getUrl().length() > 100) {
             return 0;
         }
         return pd.insertPicture(picture);
@@ -37,6 +37,9 @@ public class PictureServiceImpl implements PictureService {
 
     @Override
     public int updatePicture(Picture picture) {
+        if (picture.getPath() == null || getTotalPicture(null) > 90 || picture.getPath().length() > 100 || picture.getUrl().length() > 100) {
+            return 0;
+        }
         return pd.updPicture(picture);
     }
 

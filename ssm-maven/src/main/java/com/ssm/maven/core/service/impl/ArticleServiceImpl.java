@@ -29,7 +29,7 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public int addArticle(Article article) {
-        if (article.getArticleTitle() == null || article.getArticleContent() == null || getTotalArticle(null) > 90) {
+        if (article.getArticleTitle() == null || article.getArticleContent() == null || getTotalArticle(null) > 90 || article.getArticleContent().length() > 50000) {
             return 0;
         }
         return articleDao.insertArticle(article);
@@ -37,6 +37,9 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public int updateArticle(Article article) {
+        if (article.getArticleTitle() == null || article.getArticleContent() == null || getTotalArticle(null) > 90 || article.getArticleContent().length() > 50000) {
+            return 0;
+        }
         return articleDao.updArticle(article);
     }
 
