@@ -5,6 +5,9 @@
     <title>article-list</title>
 </head>
 <body>
+<ul class="list">
+
+</ul>
 
 </body>
 <script type="text/javascript" src="jquery-easyui-1.3.3/jquery.min.js"></script>
@@ -12,33 +15,34 @@
     window.onload = function () {
         $.ajax({
             type: "POST",
-            url: "/article/list",
+            url: "/article/list.do",
             contentType: "application/json; charset=utf-8",
             data: "{}",
             dataType: "json",
             success: function (result) {
-                DisplayListItems(result);
+                //console.log(result.rows);
+                DisplayListItems(result.rows);
             },
             "error": function (result) {
                 var response = result.responseText;
-                alert('Error loading: ' + response);
+                alert('errot');
             }
         });
     }
 
     function DisplayListItems(list) {
         $.each(list, function (index, element) {
-            var itemHTML = ["<li href='article.html?id='" + element.articleID + ">",
-                "<div>",
+            var itemHTML = ["<li><a href='article.html?id=" + element.id + "'>",
                 "<div>",
                 element.articleTitle,
-                "</div>",
+                "</div><a/>",
                 "<div>",
-                element.addname,
+                element.addName,
                 "</div>",
                 "</div>",
                 "</li>"].join('\n');
-            $(".list > ul").append(itemHTML);
+            //console.log(itemHTML);
+            $(".list").append(itemHTML);
         })
     }
 </script>
