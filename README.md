@@ -1,4 +1,5 @@
 # ssm-demo <br /> 
+我的qq：1034683568<br /> 
 代码更新都会在ssm-maven项目下<br /> 
 
 Spring+SpringMVC+mybatis+easy-ui实现的一个简单demo，项目为两年前做的一个项目，后续会逐渐优化改造。 <br /> <br /> 
