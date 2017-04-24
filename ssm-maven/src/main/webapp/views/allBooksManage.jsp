@@ -47,7 +47,6 @@
         <th field="subtitle" width="10" align="center" hidden="true">副标题</th>
         <th field="title" width="110" align="center">书名</th>
         <th field="author" width="70" align="center">作者</th>
-        <th field="catalog" width="10" align="center" hidden="true">目录</th>
         <th field="isbn" width="120" align="center">ISBN码</th>
         <th field="path" width="100" align="center" formatter="formatProPic">图片</th>
         <th field="marketPrice" width="70" align="center">市场价</th>
