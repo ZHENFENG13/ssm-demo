@@ -72,7 +72,7 @@
                 <div class="i_do_div rel" id="picture"><p class="i_do_tle r_txt abs font14">展示图片</p>
                 </div>
                 <div class="i_do_div rel" id="i_no_sku_stock_wrap"><p class="i_do_tle r_txt abs font14">图片链接</p>
-                    <input type="text" id="desc" name="url" value="" style="border:1px #9c9c9c solid;height:25px;"/>
+                    <input type="text" id="desc" name="url" value="" required="true" class="easyui-validatebox" style="border:1px #9c9c9c solid;height:25px;"/>
                     <input type="hidden" name="type" value="<%=type%>"/>
                     <input type="hidden" name="grade" value="<%=grade%>"/>
                     <input type="hidden" name="time" id="time"/>
