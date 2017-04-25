@@ -11,12 +11,12 @@
     </resultMap>
 
     <select id="login" parameterType="User" resultMap="UserResult">
-        select * from
+        select id,user_name,password,role_name from
         ssm_user where user_name=#{userName} and password=#{password} limit 1
     </select>
 
     <select id="findUsers" parameterType="Map" resultMap="UserResult">
-        select * from ssm_user
+        select id,user_name,password,role_name from ssm_user
         <where>
             <if test="userName!=null and userName!='' ">
                 and user_name like #{userName}

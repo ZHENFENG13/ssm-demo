@@ -23,7 +23,7 @@
     </resultMap>
 
     <select id="findBooks" parameterType="Map" resultMap="BookResult">
-        select * from ssm_book
+        select id,isbn,path,title,subtitle,market_price,pages,author,publisher,binding,hot,status,supply from ssm_book
         <where>
             <if test="author!=null and author!='' ">
                 and author like #{author}
@@ -58,7 +58,7 @@
 
 
     <select id="getBookById" parameterType="String" resultMap="BookResult">
-        select *
+        select id,isbn,path,title,subtitle,market_price,pages,author,publisher,binding,hot,status,supply
         from ssm_book where id=#{id}
     </select>
 
