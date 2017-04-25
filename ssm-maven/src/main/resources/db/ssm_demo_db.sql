@@ -1,4 +1,3 @@
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -15,12 +14,13 @@ DROP TABLE IF EXISTS `ssm_article`;
 
 CREATE TABLE `ssm_article` (
   `id` int(4) NOT NULL AUTO_INCREMENT,
-  `article_title` varchar(100) COLLATE utf8_bin DEFAULT NULL,
-  `article_create_date` varchar(50) COLLATE utf8_bin DEFAULT NULL,
-  `article_content` longtext COLLATE utf8_bin,
-  `is_top` int(4) DEFAULT NULL,
-  `add_name` varchar(50) COLLATE utf8_bin DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `article_title` varchar(100) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `article_create_date` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `article_content` text COLLATE utf8_bin NOT NULL,
+  `is_top` int(4) NOT NULL DEFAULT '0',
+  `add_name` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`),
+  KEY `idx_title` (`article_title`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 LOCK TABLES `ssm_article` WRITE;
@@ -28,7 +28,10 @@ LOCK TABLES `ssm_article` WRITE;
 
 INSERT INTO `ssm_article` (`id`, `article_title`, `article_create_date`, `article_content`, `is_top`, `add_name`)
 VALUES
-	(136,X'31',X'323031372D30342D31322031353A31373A3539',X'3C6831206C6162656C3D22E6A087E9A298E5B185E5B7A622207374796C653D22666F6E742D73697A653A20333270783B20666F6E742D7765696768743A20626F6C643B20626F726465722D626F74746F6D2D77696474683A203270783B20626F726465722D626F74746F6D2D7374796C653A20736F6C69643B20626F726465722D626F74746F6D2D636F6C6F723A20726762283230342C203230342C20323034293B2070616464696E673A203070782034707820307078203070783B20746578742D616C69676E3A206C6566743B206D617267696E3A203070782030707820313070783B223E3C7370616E207374796C653D22666F6E742D73697A653A20323470783B223E32736673663C696D67207372633D22687474703A2F2F696D672E62616964752E636F6D2F68692F6A78322F6A5F303030332E676966222F3E3C2F7370616E3E3C2F68313E3C68323E3C7370616E207374796C653D22666F6E742D66616D696C793A20E5BEAEE8BDAFE99B85E9BB912C202671756F743B4D6963726F736F66742059614865692671756F743B3B223E73616166736166736161736164617364616473617361643C7370616E207374796C653D22666F6E742D66616D696C793A20E5BEAEE8BDAFE99B85E9BB912C202671756F743B4D6963726F736F66742059614865692671756F743B3B206261636B67726F756E642D636F6C6F723A20726762283235352C20302C2030293B223E6173646173666173646161736473643C2F7370616E3E3C2F7370616E3E3C62722F3E3C2F68323E',0,X'31');
+	(1039,X'64656D6F',X'323031372D30342D32322031373A31353A3034',X'3C703E746573743C2F703E',0,X'E696B0E78CBF'),
+	(1040,X'31',X'323031372D30342D32332031343A32373A3135',X'3C703E3132333231333C696D67207372633D222F75656469746F722F6A73702F75706C6F61642F696D6167652F32303137303432332F313439323932383831363936383031393738352E6A706722207469746C653D22313439323932383831363936383031393738352E6A70672220616C743D22753D323930303935313334332C3230343236343232373326616D703B666D3D323326616D703B67703D302E6A7067222F3E3C2F703E',0,X'32'),
+	(1042,X'31',X'323031372D30342D32332031363A35323A3436',X'3C703E313C2F703E',0,X'31'),
+	(1043,X'31',X'323031372D30342D32332032323A34363A3339',X'3C703E313C2F703E',0,X'31');
 
 /*!40000 ALTER TABLE `ssm_article` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -42,21 +45,22 @@ DROP TABLE IF EXISTS `ssm_book`;
 CREATE TABLE `ssm_book` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `isbn` varchar(15) NOT NULL,
-  `path` varchar(150) DEFAULT '',
-  `title` varchar(200) DEFAULT '',
-  `subtitle` varchar(200) DEFAULT '',
-  `original_title` varchar(200) DEFAULT '',
-  `market_price` varchar(10) DEFAULT '',
-  `intro` text,
-  `binding` varchar(20) DEFAULT '',
-  `pages` varchar(10) DEFAULT NULL,
-  `author` varchar(200) DEFAULT NULL,
-  `publisher` varchar(100) DEFAULT NULL,
-  `catalog` text,
-  `supply` varchar(20) DEFAULT NULL,
-  `status` int(11) DEFAULT '0',
-  `hot` int(11) DEFAULT '0',
-  PRIMARY KEY (`id`)
+  `path` varchar(150) NOT NULL DEFAULT '',
+  `title` varchar(200) NOT NULL DEFAULT '',
+  `subtitle` varchar(200) NOT NULL DEFAULT '',
+  `original_title` varchar(200) NOT NULL DEFAULT '',
+  `market_price` varchar(10) NOT NULL DEFAULT '',
+  `intro` text NOT NULL,
+  `binding` varchar(20) NOT NULL DEFAULT '',
+  `pages` varchar(10) NOT NULL DEFAULT '',
+  `author` varchar(200) NOT NULL DEFAULT '',
+  `publisher` varchar(100) NOT NULL DEFAULT '',
+  `catalog` text NOT NULL,
+  `supply` varchar(20) NOT NULL DEFAULT '',
+  `status` int(11) NOT NULL DEFAULT '0',
+  `hot` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `idx_title` (`title`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `ssm_book` WRITE;
@@ -559,15 +563,15 @@ VALUES
 	(1489,'9780201310092','images/nocover.jpg','Concurrent Programming in Java(TM)','','','$54.99','In this second edition, you will find thoroughly updated coverage of the Java(tm) 2 platform and new or expanded coverage of:* Memory model  * Cancellation  * Portable parallel programming  * Utility classes for concurrency controlThe Java platform provides a broad and powerful set of APIs, tools, and technologies. One of its most powerful capabilities is the built-in support for threads. This makes concurrent programming an attractive yet challenging option for programmers using the Java programming language.This book shows readers how to use the Java platform\'s threading model more precisely by helping them to understand the patterns and tradeoffs associated with concurrent programming.You will learn how to initiate, control, and coordinate concurrent activities using the class java.lang.Thread, the keywords synchronized and volatile, and the methods wait, notify, and notifyAll. In addition, you will find detailed coverage of all aspects of concurrent programming, including such topics as confinement and synchronization, deadlocks and conflicts, state-dependent action control, asynchronous message passing and control flow, coordinated interaction, and structuring web-based and computational services.The book targets intermediate to advanced programmers interested in mastering the complexities of concurrent programming. Taking a design pattern approach, the book offers standard design techniques for creating and implementing components that solve common concurrent programming challenges. The numerous code examples throughout help clarify the subtleties of the concurrent programming concepts discussed.','Paperback','432',' Doug Lea ','Addison-Wesley Professional','','0',0,0),
 	(1490,'9780130115102','images/nocover.jpg','Java Modeling In Color With UML','','','USD 49.99','Peter Coad著，Prentice Hall ，1999年6月（暂无中译本）推荐最后这本书的目的是明确的：一位称职的J2EE开发者应该具备一定的领域建模能力。但从知名度上来说，被推荐的对象似乎应该是《分析模式》或者《Domain Driven Design》，而不是这本几乎从来没在国内引起过关注的“小书”。遗憾的是，Martin Fowler那本书缺乏对实践经验的归纳总结，而Eric Evans那本对于“怎么把业务概念变成领域模型”这件最后的、却绝非最不重要的事情语焉不详。不过好在Peter Coad是出了名的鬼才，惟其如此才能保证区区221页内容确实言之有物。从计算机科学的角度来分析，越是形式化、可递归应用的方法就越具有可操作性。Eric Evans的DDD在“理解需求”方面的阐述很具可操作性，而Peter Coad提出的几类基本元模型对于实际进行建模工作有着非比寻常的指导价值——当大多数人在分析业务领域模型时，Peter Coad在分析业务领域的元模型，其“鬼才”由此可见一斑。至于“带颜色的UML”，无非是对元模型的一种直观描述而已。对于面向对象（而非面向用例）的企业应用业务建模，这本“小书”便是首屈一指的最佳实践指南。','Textbook Binding','221','  Peter Coad，Jeff de Luca，Eric Lefebvre','Prentice Hall PTR','','0',0,0),
 	(1491,'9780764574832','images/nocover.jpg','Professional Java Development with the Spring Framework','','','USD 39.99','The Spring Framework is a major open source application development framework that makes Java/J2EE(TM) development easier and more productive. This book shows you not only what Spring can do but why, explaining its functionality and motivation to help you use all parts of the framework to develop successful applications.  You will be guided through all the Spring features and see how they form a coherent whole. In turn, this will help you understand the rationale for Spring\'s approach, when to use Spring, and how to follow best practices. All this is illustrated with a complete sample application. When you finish the book, you will be well equipped to use Spring effectively in everything from simple Web applications to complex enterprise applications.  What you will learn from this book * The core Inversion of Control container and the concept of Dependency Injection * Spring\'s Aspect Oriented Programming (AOP) framework and why AOP is important in J2EE development * How to use Spring\'s programmatic and declarative transaction management services effectively * Ways to access data using Spring\'s JDBC functionality, iBATIS SQL Maps, Hibernate, and other O/R mapping frameworks * Spring services for accessing and implementing EJBs * Spring\'s remoting framework  Who this book is for  This book is for Java/J2EE architects and developers who want to gain a deeper knowledge of the Spring Framework and use it effectively.  Wrox Professional guides are planned and written by working programmers to meet the real-world needs of programmers, developers, and IT professionals. Focused and relevant, they address the issues technology professionals face every day. They provide examples, practical solutions, and expert education in new technologies, all designed to help programmers do a better job.','Paperback','676',' Rod Johnson ，Juergen Hoeller，Alef Arendsen','Wrox','','0',0,0),
-	(1492,'9787308114431','images/nocover.jpg','中国特色社会主义在浙江的实践','',NULL,'19.00元','本书主要阐述了中国特色社会主义在浙江的实践之路、“立足浙江实际，调整和完善所有制结构”、“以发展市场经济为目标，推进经济体制改革”等内容。','','206','谭劲松','浙江大学出版社','','11',1,0),
-	(1493,'9787040381931','images/nocover.jpg','零售学','',NULL,'38.10元','《学（第3版）/本科高等学校市场营销专业主干课程教材》是在第二版基础上修订的第三版教材，是高等学校市场营销专业课程教材之一。本书将企业经营活动各要素合乎逻辑而又清晰简明地联系在一起，综合了国内外学者对管理的研究成果，紧扣当前中国管理的实践，从战略和策略两个层面深入系统地介绍了企业管理的各个方面，包括概述、战略与组织、业务管理三篇共12章。本书同时引用了大量图表，并利用“案例分析”、“专论”、“资料”等栏目，为读者分析和理解企业管理的实际问题和热点问题提供了指导。本书还配备了一套与全文内容相符的电子教学课件，可用作现代化教学的辅助工具。　　《学（第3版）/本科高等学校市场营销专业主干课程教材》可作为高等院校市场营销专业和其他管理类专业专科生、本科生、研究生、MBA及相关专业学生的教材，也适合企业管理的实践者和理论研究者用作培训教材或阅读参考。','','355','肖怡','高等教育出版社','第一篇 概述章 导论节 及业第二节 组织发展规律第三节 西方业四次重大变革第四节 急剧变革的中国业本章小结思考题案例分析第二章 现代业态介绍节 业态的含义第二节 百货商店第三节 超级市场第四节 专业店与专卖店第五节 便利店第六节 仓储式商店第七节 购物中心第八节 无店铺业态本章小结思考题案例分析第二篇 战略与组织第三章 竞争战略节 建立竞争优势第二节 环境分析与确定竞争战略第三节 成本领先战略第四节 差异化战咯第五节 目标集聚战略本章小结思考题案例分析第四章 扩张战略节 扩张战略组合第二节 商圈分析第三节 商店位置选择第四节 两种具体的选址方法本章小结思考题案例分析第五章 组织设计节 组织结构设计的内容和要求第二节 组织结构设计程序第三节 组织结构类型第四节 组织文化本章小结思考题案例分析第三篇 业务管理第六章 商品规划节 商品经营范围的确定第二节 商品结构优化第三节 品类管理与单品管理第四节 自有品牌的开发本章小结思考题案例分析第七章 采购管理节 商品采购流程第二节 采购制度与人员管理第三节 商品采购决策本章小结思考题第十二章 网络与信息化节 网络第二节 信息化第三节 智能商店本章小结思考题案例分析主要参考文献 ','6',1,0),
-	(1494,'9787301229651','images/nocover.jpg','数据结构','',NULL,'32.00元','本书是为“数据结构”课程编写的教材，共9章，系统介绍了各种常用的数据结构与算法方面的基本知识。第1章为绪论，引入了数据结构与算法的一些基本概念：第247章分别介绍了线性表、栈、队列、串、多维数组、树和图等几种基本的数据结构：第8章和第9章分別介绍了多种查找和排序的算法。本书引入的主要案例都源自实际项目应用，案例、项目由企业工程师根据章节内容设计并实现，全部程序都在C Free5．0中调试通过。本书可以作为高等院校计算机、软件工程等相关专业本科学生的教材，也可以作为其他理工科专业的选修教材，还可供从事计算机应用的工程技术人员参考，读者只需掌握C语言编程的基本技术就可以学习本书。 ','','250','陈超祥','北京大学出版社','第一章　绪论第二章　线性表第三章　栈与队例第四章　串第五章　多维数组第六章　树第七章　图第八章　排序第九章　查找参考文献 ','0',0,0),
-	(1495,'9787544632256','images/nocover.jpg','全新版大学英语（第2版）：听说教程2（学生用书）','',NULL,'28.00元','《全新版大学英语（第2版）：听说教程2（学生用书）》秉承首版教材的优良传统，继承兼收并蓄的折中主义教学理念，参照《大学英语课程教学要求》修订，《全新版大学英语（第2版）：听说教程2（学生用书）（附光盘）》更加贴近教学实际，更有效提升学习者语言综合应用能力，更好满足新时期人才培养需求。','','134','虞苏美','上海外语教育出版社','Unit  1  SportsUnit  2  Food  and  DrinksUnit  3  WeatherUnit  4  MusicUnit  5  HealthUnit  6  BusinessUnit  7  FashionUnit  8  SocietyUnit  9  Dreams  and  AmbitionsUnit  10  DisastersUnit  11  Famous  PeopleUnit  12  The  InternetUnit  13  Huma VirtuesUnit  14  CultureTest1Test2 ','0',0,0),
-	(1496,'9787563530359','images/nocover.jpg','机械设计基础','',NULL,'34.00元','','','275','王良斌 王保华','北京邮电大学','','11',1,0),
-	(1497,'9787811409499','images/nocover.jpg','人力资源管理','',NULL,'48.00元','《人力资源管理》以人力资源管理的获取、保留、发展、协调四大功能为主线展开论述，具有结构框架新、内容全面且有前瞻性、教学方法注重教学相长和角色互动等特点。本教材既突显创新精神，又兼顾本土化、实用性的需要。全书各章节均配有开放式讨论题和角色模拟训练，适于作为企业管理和人力资源管理专业本科生的教材，也适合作为相关专业和企业管理人员的培训教材。','','228','诸葛剑平','浙江工商大学出版社','第一章 人力资源管理概述 节 人力资源管理的产生与发展 第二节 人力资源管理在组织中的实现第二章 人力资源管理的理论基础 节 人性假设理论 第二节 组织设计理论 第三节 激励理论 第四节 人力资本理论 第五节 委托代理理论第三章 岗位分析 节 岗位分析的含义与程序 第二节 岗位分析的方法与岗位说明书第四章 人力资源规划 节 人力资源规划概述 第二节 人力资源规划的程序与方法第五章 人力资源招聘与配置 节 人力资源招聘与配置概述 第二节 内部招聘与外部招聘 第三节 招聘流程及技术第六章 培训与开发 节 培训与开发概述 第二节 培训管理第七章 绩效管理 节 绩效管理概述 第二节 绩效管理的程序与实施第八章 薪酬设计与管理 节 薪酬管理概述 第二节 薪酬设计的程序与方法第九章 职业生涯管理与发展 节 职业生涯发展概况 第二节 职业生涯选择的原则、策略 第三节 职业生涯选择理论简介第十章 劳动关系管理 节 劳动关系管理概述 第二节 劳动合同管理 第三节 集体合同管理 第四节 劳动争议处理参考文献','0',0,0),
-	(1498,'9787303164288','images/nocover.jpg','大球教程：篮球、排球、足球','',NULL,'34.50元','《大球教程：篮球、排球、足球》根据“三大球”运动的自身规律，围绕“三大球”运动的起源与发展、基本技术与战术、比赛与竞赛规则、教学内容与方法等内容，以基本“入门”目标和发展“提高”目标作为主线，根据不同层次学生的知识结构和技能，在力求知识性、趣味性、可读性和应用性的基础上，将“教学”嵌入到基本技、战术的章节中，既丰富了教师的教学方法和组织手段，又提高了学生的学习兴趣和课外自学能力。通过对教材的学习使广大学生了解和掌握“三大球”的基本知识、技能和练习方法，了解和掌握“三大球”的竞赛规则、裁判法和竞赛组织，学以致用，终身受益。','','375','邢琦','北京师范大学出版社',' 编 篮球运动　章 篮球运动概述　　节 篮球运动的起源与发展　　第二节 篮球运动的重要组织与赛事　第二章 篮球运动基本技术与教学　　节 移动技术　　第二节 传接球技术　　第三节 运球技术　　第四节 投篮技术　　第五节 篮板球技术　　第六节 防守技术　第三章 篮球运动基本战术与教学　　节 战术基础配合　　第二节 快攻与防守快攻　　第三节 半场人盯人防守与进攻半场人盯人防守　　第四节 区域联防与进攻区域联防　第四章 篮球竞赛规则、裁判法与组织　　节 篮球竞赛规则　　第二节 篮球竞赛裁判法　　第三节 篮球竞赛的组织与编排第二编 排球运动　第五章 排球运动概述　　节 排球运动的起源与发展　　第二节 排球运动的重要组织与赛事　第六章 排球运动基本技术与教学　　节 准备姿势与移动　　第二节 垫球技术　　第三节 传球技术　　第四节 发球技术　　第五节 扣球技术　　第六节 拦网技术　第七章 排球运动基本战术与教学　　节 排球战术的基础理论　　第二节 排球个人战术　　第三节 排球集体战术　第八章 排球竞赛规则、裁判法与组织　　节 排球竞赛规则　　第二节 排球竞赛裁判法　　第三节 基层排球竞赛的组织工作第三编 足球运动　第九章 足球运动概述　　节 足球运动的起源与发展　　第二节 足球运动的重要组织与赛事　第十章 足球运动基本技术与教学　　节 颠球　　第二节 踢球　　第三节 停球　　第四节 头顶球　　第五节 运球     ','33',1,0),
-	(1499,'9787107279713','images/nocover.jpg','高考专升本教材全国各类高等学校招生考试丛书（专科起点升本科） 英语 ','',NULL,'27.50元','《全国各类高等学校招生考试丛书:英语(专科起点升本科)》的编者是从事专升本英语考试考前辅导的教师，在长期的教学、辅导过程中，积累了丰富的教学和考前辅导经验，能够准确地把握知识的重点和难点。为保证考生复习，《全国各类高等学校招生考试丛书:英语(专科起点升本科)》参照考试大纲规定的考试内容和考试要求进行编排，便于考生深入理解考试要求，巩固相关知识，提升应考能力。       ','','267','成人高考《英语》编写组','人民教育出版社','第一章语音 1.字母 2.音标 3.音节 4.元音字母在重读音节中的读音 5.辅音字母在单词中的读音 6.常见字母组合的读音 自测习题及参考答案 第二章词法 节名词 1.可数名词和不可数名词 2.名词的复数形式 3.名词的所有格 4.名词在句子中的作用 自测习题及参考答案 第二节冠词 1.不定冠词的基本用法 2.定冠词的基本用法 3.不加冠词的基本规则 4.冠词的习惯用法 自测习题及参考答案 第三节代词 1.人称代词 2.物主代词 3.反身代词 4.指示代词 5.疑问代词 6.关系代词 7.不定代词 自测习题及参考答案 第四节数词 1.基数词 2.序数词 3.分数 4.小数 自测习题及参考答案 第五节形容词和副词及其比较级 1.形容词、副词在句子中的作用 2.形容词、副词比较级和的构成 3.形容词、副词比较级和的基本用法 自测习题及参考答案 第六节介词 1.常用的介词 2.介词与动词、形容词、名词的固定搭配 3.介词短语及其用法 自测习题及参考答案 第七节动词 1.动词的分类 2.动词的基本形式 3.动词的主要时态 4.情态动词及其基本用法 5.谓语动词的构成及基本用法 6.被动语态的构成及基本用法 7.虚拟语气的常见形式及基本用法 自测习题及参考答案 第八节连词 1.并列连词及其用法 2.从属连词及其用法 自测习题及参考答案 第三章句法 节基本句型 1.主语+谓语动词 2.主语+谓语动词+宾语 3.主语+谓语动词+宾语+宾语 4.主语+谓语动词+宾语+宾语补足语 5.主语+谓语动词+主语补足语 自测习题及参考答案 第二节句子按用途分类 1.陈述句 2.疑问句 3.祈使句 4.感叹句 自测习题及参考答案 第三节句子按结构分类 1.简单句 2.并列句 3.复合句 A.名词性从句 B.定语从句 C.状语从句 4.强调句、倒装句、省略句 5.直接引语和间接引语 自测习题及参考答案 第四章构词法 节派生法 1.前缀 2.后缀 第二节合成法 1.复合形容词 2.复合名词 3.复合动词 4.合成代词 5.合成副词 第三节转换法 1.动词转化为名词 2.名词转化为动词 3.形容词转化为动词 4.形容词转化为名词 5.副词转化为动词 6.数词转化为动词 自测习题及参考答案 第五章完型填空 1.对词汇知识的考查 2.对语法知识的考查 3.对语篇技巧、上下文逻辑关系的考查 自测习题及参考答案 第六章阅读理解 1.中心思想题 2.细节题 3.观点态度题 4.推理判断题 自测习题及参考答案 第七章日常会话 1.感谢时的用语 2.问候时的用语 3.介绍时的用语 4.提议时的用语 5.告别时的用语 6.道歉时的用语 7.请求时的用语 8.邀请时的用语 9.拒绝时的用语 第八章短文写作 参考样题 附录 不规则动词表      ','1',1,0),
-	(1500,'9787308090230','images/nocover.jpg','计算机基础实践导学','',NULL,'35.00元','','','302','黄小莹','浙江大学出版社','','121',1,0);
+	(1492,'9787308114431','images/nocover.jpg','中国特色社会主义在浙江的实践','','','19.00元','本书主要阐述了中国特色社会主义在浙江的实践之路、“立足浙江实际，调整和完善所有制结构”、“以发展市场经济为目标，推进经济体制改革”等内容。','','206','谭劲松','浙江大学出版社','','11',1,0),
+	(1493,'9787040381931','images/nocover.jpg','零售学','','','38.10元','《学（第3版）/本科高等学校市场营销专业主干课程教材》是在第二版基础上修订的第三版教材，是高等学校市场营销专业课程教材之一。本书将企业经营活动各要素合乎逻辑而又清晰简明地联系在一起，综合了国内外学者对管理的研究成果，紧扣当前中国管理的实践，从战略和策略两个层面深入系统地介绍了企业管理的各个方面，包括概述、战略与组织、业务管理三篇共12章。本书同时引用了大量图表，并利用“案例分析”、“专论”、“资料”等栏目，为读者分析和理解企业管理的实际问题和热点问题提供了指导。本书还配备了一套与全文内容相符的电子教学课件，可用作现代化教学的辅助工具。　　《学（第3版）/本科高等学校市场营销专业主干课程教材》可作为高等院校市场营销专业和其他管理类专业专科生、本科生、研究生、MBA及相关专业学生的教材，也适合企业管理的实践者和理论研究者用作培训教材或阅读参考。','','355','肖怡','高等教育出版社','第一篇 概述章 导论节 及业第二节 组织发展规律第三节 西方业四次重大变革第四节 急剧变革的中国业本章小结思考题案例分析第二章 现代业态介绍节 业态的含义第二节 百货商店第三节 超级市场第四节 专业店与专卖店第五节 便利店第六节 仓储式商店第七节 购物中心第八节 无店铺业态本章小结思考题案例分析第二篇 战略与组织第三章 竞争战略节 建立竞争优势第二节 环境分析与确定竞争战略第三节 成本领先战略第四节 差异化战咯第五节 目标集聚战略本章小结思考题案例分析第四章 扩张战略节 扩张战略组合第二节 商圈分析第三节 商店位置选择第四节 两种具体的选址方法本章小结思考题案例分析第五章 组织设计节 组织结构设计的内容和要求第二节 组织结构设计程序第三节 组织结构类型第四节 组织文化本章小结思考题案例分析第三篇 业务管理第六章 商品规划节 商品经营范围的确定第二节 商品结构优化第三节 品类管理与单品管理第四节 自有品牌的开发本章小结思考题案例分析第七章 采购管理节 商品采购流程第二节 采购制度与人员管理第三节 商品采购决策本章小结思考题第十二章 网络与信息化节 网络第二节 信息化第三节 智能商店本章小结思考题案例分析主要参考文献 ','6',1,0),
+	(1494,'9787301229651','images/nocover.jpg','数据结构','','','32.00元','本书是为“数据结构”课程编写的教材，共9章，系统介绍了各种常用的数据结构与算法方面的基本知识。第1章为绪论，引入了数据结构与算法的一些基本概念：第247章分别介绍了线性表、栈、队列、串、多维数组、树和图等几种基本的数据结构：第8章和第9章分別介绍了多种查找和排序的算法。本书引入的主要案例都源自实际项目应用，案例、项目由企业工程师根据章节内容设计并实现，全部程序都在C Free5．0中调试通过。本书可以作为高等院校计算机、软件工程等相关专业本科学生的教材，也可以作为其他理工科专业的选修教材，还可供从事计算机应用的工程技术人员参考，读者只需掌握C语言编程的基本技术就可以学习本书。 ','','250','陈超祥','北京大学出版社','第一章　绪论第二章　线性表第三章　栈与队例第四章　串第五章　多维数组第六章　树第七章　图第八章　排序第九章　查找参考文献 ','0',0,0),
+	(1495,'9787544632256','images/nocover.jpg','全新版大学英语（第2版）：听说教程2（学生用书）','','','28.00元','《全新版大学英语（第2版）：听说教程2（学生用书）》秉承首版教材的优良传统，继承兼收并蓄的折中主义教学理念，参照《大学英语课程教学要求》修订，《全新版大学英语（第2版）：听说教程2（学生用书）（附光盘）》更加贴近教学实际，更有效提升学习者语言综合应用能力，更好满足新时期人才培养需求。','','134','虞苏美','上海外语教育出版社','Unit  1  SportsUnit  2  Food  and  DrinksUnit  3  WeatherUnit  4  MusicUnit  5  HealthUnit  6  BusinessUnit  7  FashionUnit  8  SocietyUnit  9  Dreams  and  AmbitionsUnit  10  DisastersUnit  11  Famous  PeopleUnit  12  The  InternetUnit  13  Huma VirtuesUnit  14  CultureTest1Test2 ','0',0,0),
+	(1496,'9787563530359','images/nocover.jpg','机械设计基础','','','34.00元','','','275','王良斌 王保华','北京邮电大学','','11',1,0),
+	(1497,'9787811409499','images/nocover.jpg','人力资源管理','','','48.00元','《人力资源管理》以人力资源管理的获取、保留、发展、协调四大功能为主线展开论述，具有结构框架新、内容全面且有前瞻性、教学方法注重教学相长和角色互动等特点。本教材既突显创新精神，又兼顾本土化、实用性的需要。全书各章节均配有开放式讨论题和角色模拟训练，适于作为企业管理和人力资源管理专业本科生的教材，也适合作为相关专业和企业管理人员的培训教材。','','228','诸葛剑平','浙江工商大学出版社','第一章 人力资源管理概述 节 人力资源管理的产生与发展 第二节 人力资源管理在组织中的实现第二章 人力资源管理的理论基础 节 人性假设理论 第二节 组织设计理论 第三节 激励理论 第四节 人力资本理论 第五节 委托代理理论第三章 岗位分析 节 岗位分析的含义与程序 第二节 岗位分析的方法与岗位说明书第四章 人力资源规划 节 人力资源规划概述 第二节 人力资源规划的程序与方法第五章 人力资源招聘与配置 节 人力资源招聘与配置概述 第二节 内部招聘与外部招聘 第三节 招聘流程及技术第六章 培训与开发 节 培训与开发概述 第二节 培训管理第七章 绩效管理 节 绩效管理概述 第二节 绩效管理的程序与实施第八章 薪酬设计与管理 节 薪酬管理概述 第二节 薪酬设计的程序与方法第九章 职业生涯管理与发展 节 职业生涯发展概况 第二节 职业生涯选择的原则、策略 第三节 职业生涯选择理论简介第十章 劳动关系管理 节 劳动关系管理概述 第二节 劳动合同管理 第三节 集体合同管理 第四节 劳动争议处理参考文献','0',0,0),
+	(1498,'9787303164288','images/nocover.jpg','大球教程：篮球、排球、足球','','','34.50元','《大球教程：篮球、排球、足球》根据“三大球”运动的自身规律，围绕“三大球”运动的起源与发展、基本技术与战术、比赛与竞赛规则、教学内容与方法等内容，以基本“入门”目标和发展“提高”目标作为主线，根据不同层次学生的知识结构和技能，在力求知识性、趣味性、可读性和应用性的基础上，将“教学”嵌入到基本技、战术的章节中，既丰富了教师的教学方法和组织手段，又提高了学生的学习兴趣和课外自学能力。通过对教材的学习使广大学生了解和掌握“三大球”的基本知识、技能和练习方法，了解和掌握“三大球”的竞赛规则、裁判法和竞赛组织，学以致用，终身受益。','','375','邢琦','北京师范大学出版社',' 编 篮球运动　章 篮球运动概述　　节 篮球运动的起源与发展　　第二节 篮球运动的重要组织与赛事　第二章 篮球运动基本技术与教学　　节 移动技术　　第二节 传接球技术　　第三节 运球技术　　第四节 投篮技术　　第五节 篮板球技术　　第六节 防守技术　第三章 篮球运动基本战术与教学　　节 战术基础配合　　第二节 快攻与防守快攻　　第三节 半场人盯人防守与进攻半场人盯人防守　　第四节 区域联防与进攻区域联防　第四章 篮球竞赛规则、裁判法与组织　　节 篮球竞赛规则　　第二节 篮球竞赛裁判法　　第三节 篮球竞赛的组织与编排第二编 排球运动　第五章 排球运动概述　　节 排球运动的起源与发展　　第二节 排球运动的重要组织与赛事　第六章 排球运动基本技术与教学　　节 准备姿势与移动　　第二节 垫球技术　　第三节 传球技术　　第四节 发球技术　　第五节 扣球技术　　第六节 拦网技术　第七章 排球运动基本战术与教学　　节 排球战术的基础理论　　第二节 排球个人战术　　第三节 排球集体战术　第八章 排球竞赛规则、裁判法与组织　　节 排球竞赛规则　　第二节 排球竞赛裁判法　　第三节 基层排球竞赛的组织工作第三编 足球运动　第九章 足球运动概述　　节 足球运动的起源与发展　　第二节 足球运动的重要组织与赛事　第十章 足球运动基本技术与教学　　节 颠球　　第二节 踢球　　第三节 停球　　第四节 头顶球　　第五节 运球     ','33',1,0),
+	(1499,'9787107279713','images/nocover.jpg','高考专升本教材全国各类高等学校招生考试丛书（专科起点升本科） 英语 ','','','27.50元','《全国各类高等学校招生考试丛书:英语(专科起点升本科)》的编者是从事专升本英语考试考前辅导的教师，在长期的教学、辅导过程中，积累了丰富的教学和考前辅导经验，能够准确地把握知识的重点和难点。为保证考生复习，《全国各类高等学校招生考试丛书:英语(专科起点升本科)》参照考试大纲规定的考试内容和考试要求进行编排，便于考生深入理解考试要求，巩固相关知识，提升应考能力。       ','','267','成人高考《英语》编写组','人民教育出版社','第一章语音 1.字母 2.音标 3.音节 4.元音字母在重读音节中的读音 5.辅音字母在单词中的读音 6.常见字母组合的读音 自测习题及参考答案 第二章词法 节名词 1.可数名词和不可数名词 2.名词的复数形式 3.名词的所有格 4.名词在句子中的作用 自测习题及参考答案 第二节冠词 1.不定冠词的基本用法 2.定冠词的基本用法 3.不加冠词的基本规则 4.冠词的习惯用法 自测习题及参考答案 第三节代词 1.人称代词 2.物主代词 3.反身代词 4.指示代词 5.疑问代词 6.关系代词 7.不定代词 自测习题及参考答案 第四节数词 1.基数词 2.序数词 3.分数 4.小数 自测习题及参考答案 第五节形容词和副词及其比较级 1.形容词、副词在句子中的作用 2.形容词、副词比较级和的构成 3.形容词、副词比较级和的基本用法 自测习题及参考答案 第六节介词 1.常用的介词 2.介词与动词、形容词、名词的固定搭配 3.介词短语及其用法 自测习题及参考答案 第七节动词 1.动词的分类 2.动词的基本形式 3.动词的主要时态 4.情态动词及其基本用法 5.谓语动词的构成及基本用法 6.被动语态的构成及基本用法 7.虚拟语气的常见形式及基本用法 自测习题及参考答案 第八节连词 1.并列连词及其用法 2.从属连词及其用法 自测习题及参考答案 第三章句法 节基本句型 1.主语+谓语动词 2.主语+谓语动词+宾语 3.主语+谓语动词+宾语+宾语 4.主语+谓语动词+宾语+宾语补足语 5.主语+谓语动词+主语补足语 自测习题及参考答案 第二节句子按用途分类 1.陈述句 2.疑问句 3.祈使句 4.感叹句 自测习题及参考答案 第三节句子按结构分类 1.简单句 2.并列句 3.复合句 A.名词性从句 B.定语从句 C.状语从句 4.强调句、倒装句、省略句 5.直接引语和间接引语 自测习题及参考答案 第四章构词法 节派生法 1.前缀 2.后缀 第二节合成法 1.复合形容词 2.复合名词 3.复合动词 4.合成代词 5.合成副词 第三节转换法 1.动词转化为名词 2.名词转化为动词 3.形容词转化为动词 4.形容词转化为名词 5.副词转化为动词 6.数词转化为动词 自测习题及参考答案 第五章完型填空 1.对词汇知识的考查 2.对语法知识的考查 3.对语篇技巧、上下文逻辑关系的考查 自测习题及参考答案 第六章阅读理解 1.中心思想题 2.细节题 3.观点态度题 4.推理判断题 自测习题及参考答案 第七章日常会话 1.感谢时的用语 2.问候时的用语 3.介绍时的用语 4.提议时的用语 5.告别时的用语 6.道歉时的用语 7.请求时的用语 8.邀请时的用语 9.拒绝时的用语 第八章短文写作 参考样题 附录 不规则动词表      ','1',1,0),
+	(1500,'9787308090230','images/nocover.jpg','计算机基础实践导学','','','35.00元','','','302','黄小莹','浙江大学出版社','','121',1,0);
 
 /*!40000 ALTER TABLE `ssm_book` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -580,11 +584,11 @@ DROP TABLE IF EXISTS `ssm_picture`;
 
 CREATE TABLE `ssm_picture` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `path` varchar(150) DEFAULT NULL,
-  `type` int(11) DEFAULT NULL,
-  `time` varchar(100) DEFAULT NULL,
-  `url` varchar(200) DEFAULT NULL,
-  `grade` int(11) DEFAULT NULL,
+  `path` varchar(150) NOT NULL DEFAULT '',
+  `type` int(11) NOT NULL DEFAULT '1',
+  `time` varchar(100) NOT NULL DEFAULT '',
+  `url` varchar(200) NOT NULL DEFAULT '',
+  `grade` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -593,8 +597,9 @@ LOCK TABLES `ssm_picture` WRITE;
 
 INSERT INTO `ssm_picture` (`id`, `path`, `type`, `time`, `url`, `grade`)
 VALUES
-	(4,'upload/20170413_10592195.png',1,'2017-04-11 10:09:05','',1),
-	(5,'upload/20170413_10593353.png',1,'2017-04-12 17:28:56','',1);
+	(32,'upload/20170422_17153667.jpg',1,'2017-04-22 17:15:44','',1),
+	(34,'upload/20170422_17153667.jpg',2,'2017-04-22 17:15:44','',3),
+	(35,'path',1,'time','',1);
 
 /*!40000 ALTER TABLE `ssm_picture` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -607,9 +612,9 @@ DROP TABLE IF EXISTS `ssm_user`;
 
 CREATE TABLE `ssm_user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(100) DEFAULT NULL,
-  `password` varchar(100) DEFAULT NULL,
-  `role_name` varchar(20) DEFAULT NULL,
+  `user_name` varchar(100) NOT NULL DEFAULT '',
+  `password` varchar(100) NOT NULL DEFAULT '',
+  `role_name` varchar(20) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -619,8 +624,7 @@ LOCK TABLES `ssm_user` WRITE;
 INSERT INTO `ssm_user` (`id`, `user_name`, `password`, `role_name`)
 VALUES
 	(2,'admin','e10adc3949ba59abbe56e057f20f883e','系统管理员'),
-	(61,'q','7694f4a66316e53c8cdd9d9954bd611d',NULL),
-	(62,'a','0cc175b9c0f1b6a831c399e269772661',NULL);
+	(86,'asdf','cc83733cb0af8b884ff6577086b87909','');
 
 /*!40000 ALTER TABLE `ssm_user` ENABLE KEYS */;
 UNLOCK TABLES;
