@@ -13,14 +13,13 @@
 DROP TABLE IF EXISTS `ssm_article`;
 
 CREATE TABLE `ssm_article` (
-  `id` int(4) NOT NULL AUTO_INCREMENT,
-  `article_title` varchar(100) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `article_create_date` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `article_content` text COLLATE utf8_bin NOT NULL,
-  `is_top` int(4) NOT NULL DEFAULT '0',
-  `add_name` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
-  KEY `idx_title` (`article_title`)
+  `id` int(4) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `article_title` varchar(100) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '文章标题',
+  `article_create_date` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '创建时间',
+  `article_content` text COLLATE utf8_bin NOT NULL COMMENT '文章内容',
+  `is_top` int(4) NOT NULL DEFAULT '0' COMMENT '是否置顶，1为置顶，默认为0',
+  `add_name` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '添加人',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 LOCK TABLES `ssm_article` WRITE;
@@ -28,10 +27,10 @@ LOCK TABLES `ssm_article` WRITE;
 
 INSERT INTO `ssm_article` (`id`, `article_title`, `article_create_date`, `article_content`, `is_top`, `add_name`)
 VALUES
-	(1039,X'64656D6F',X'323031372D30342D32322031373A31353A3034',X'3C703E746573743C2F703E',0,X'E696B0E78CBF'),
 	(1040,X'31',X'323031372D30342D32332031343A32373A3135',X'3C703E3132333231333C696D67207372633D222F75656469746F722F6A73702F75706C6F61642F696D6167652F32303137303432332F313439323932383831363936383031393738352E6A706722207469746C653D22313439323932383831363936383031393738352E6A70672220616C743D22753D323930303935313334332C3230343236343232373326616D703B666D3D323326616D703B67703D302E6A7067222F3E3C2F703E',0,X'32'),
 	(1042,X'31',X'323031372D30342D32332031363A35323A3436',X'3C703E313C2F703E',0,X'31'),
-	(1043,X'31',X'323031372D30342D32332032323A34363A3339',X'3C703E313C2F703E',0,X'31');
+	(1043,X'31',X'323031372D30342D32332032323A34363A3339',X'3C703E3131323C2F703E',0,X'31'),
+	(1045,X'32',X'323031372D30342D32352031303A34333A3138','',0,X'32');
 
 /*!40000 ALTER TABLE `ssm_article` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -43,24 +42,23 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `ssm_book`;
 
 CREATE TABLE `ssm_book` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `isbn` varchar(15) NOT NULL,
-  `path` varchar(150) NOT NULL DEFAULT '',
-  `title` varchar(200) NOT NULL DEFAULT '',
-  `subtitle` varchar(200) NOT NULL DEFAULT '',
-  `original_title` varchar(200) NOT NULL DEFAULT '',
-  `market_price` varchar(10) NOT NULL DEFAULT '',
-  `intro` text NOT NULL,
-  `binding` varchar(20) NOT NULL DEFAULT '',
-  `pages` varchar(10) NOT NULL DEFAULT '',
-  `author` varchar(200) NOT NULL DEFAULT '',
-  `publisher` varchar(100) NOT NULL DEFAULT '',
-  `catalog` text NOT NULL,
-  `supply` varchar(20) NOT NULL DEFAULT '',
-  `status` int(11) NOT NULL DEFAULT '0',
-  `hot` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
-  KEY `idx_title` (`title`)
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `isbn` varchar(15) NOT NULL DEFAULT '' COMMENT '书籍的ISBN码',
+  `path` varchar(150) NOT NULL DEFAULT '' COMMENT '书籍封面',
+  `title` varchar(200) NOT NULL DEFAULT '' COMMENT '书名',
+  `subtitle` varchar(200) NOT NULL DEFAULT '' COMMENT '简写书名',
+  `original_title` varchar(200) NOT NULL DEFAULT '' COMMENT '原价字段',
+  `market_price` varchar(10) NOT NULL DEFAULT '' COMMENT '市场价',
+  `intro` text NOT NULL COMMENT '书籍简介',
+  `binding` varchar(20) NOT NULL DEFAULT '' COMMENT '书籍装订方式',
+  `pages` varchar(10) NOT NULL DEFAULT '' COMMENT '书籍页码',
+  `author` varchar(200) NOT NULL DEFAULT '' COMMENT '书籍作者',
+  `publisher` varchar(100) NOT NULL DEFAULT '' COMMENT '书籍出版社',
+  `catalog` text NOT NULL COMMENT '书籍目录',
+  `supply` varchar(20) NOT NULL DEFAULT '' COMMENT '库存',
+  `status` int(11) NOT NULL DEFAULT '0' COMMENT '是否上架，默认值0，0为未上架，1为上架',
+  `hot` int(11) NOT NULL DEFAULT '0' COMMENT '书籍的热度值',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `ssm_book` WRITE;
@@ -583,12 +581,12 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `ssm_picture`;
 
 CREATE TABLE `ssm_picture` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `path` varchar(150) NOT NULL DEFAULT '',
-  `type` int(11) NOT NULL DEFAULT '1',
-  `time` varchar(100) NOT NULL DEFAULT '',
-  `url` varchar(200) NOT NULL DEFAULT '',
-  `grade` int(11) NOT NULL DEFAULT '1',
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `path` varchar(150) NOT NULL DEFAULT '' COMMENT '图片地址',
+  `type` int(11) NOT NULL DEFAULT '1' COMMENT '图片类型',
+  `time` varchar(100) NOT NULL DEFAULT '' COMMENT '添加时间',
+  `url` varchar(200) NOT NULL DEFAULT '' COMMENT '点击图片的跳转链接',
+  `grade` int(11) NOT NULL DEFAULT '1' COMMENT '图片类型',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -598,8 +596,7 @@ LOCK TABLES `ssm_picture` WRITE;
 INSERT INTO `ssm_picture` (`id`, `path`, `type`, `time`, `url`, `grade`)
 VALUES
 	(32,'upload/20170422_17153667.jpg',1,'2017-04-22 17:15:44','',1),
-	(34,'upload/20170422_17153667.jpg',2,'2017-04-22 17:15:44','',3),
-	(35,'path',1,'time','',1);
+	(34,'upload/20170422_17153667.jpg',2,'2017-04-22 17:15:44','',3);
 
 /*!40000 ALTER TABLE `ssm_picture` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -611,10 +608,10 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `ssm_user`;
 
 CREATE TABLE `ssm_user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(100) NOT NULL DEFAULT '',
-  `password` varchar(100) NOT NULL DEFAULT '',
-  `role_name` varchar(20) NOT NULL DEFAULT '',
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `user_name` varchar(100) NOT NULL DEFAULT '' COMMENT '登录名',
+  `password` varchar(100) NOT NULL DEFAULT '' COMMENT '加密后的密码字段',
+  `role_name` varchar(20) NOT NULL DEFAULT '普通管理员' COMMENT '用户角色',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -624,7 +621,8 @@ LOCK TABLES `ssm_user` WRITE;
 INSERT INTO `ssm_user` (`id`, `user_name`, `password`, `role_name`)
 VALUES
 	(2,'admin','e10adc3949ba59abbe56e057f20f883e','系统管理员'),
-	(86,'asdf','cc83733cb0af8b884ff6577086b87909','');
+	(86,'asdf','cc83733cb0af8b884ff6577086b87909','普通管理员'),
+	(87,'ads','36b74e397832402c57934da8c172fd83','普通管理员');
 
 /*!40000 ALTER TABLE `ssm_user` ENABLE KEYS */;
 UNLOCK TABLES;
