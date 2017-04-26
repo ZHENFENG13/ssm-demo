@@ -38,7 +38,7 @@
         <th field="articleTitle" width="200" align="center">标题</th>
         <th field="articleCreateDate" width="150" align="center">创建时间</th>
         <th field="addName" width="150" align="center">添加人</th>
-        <th field="status" width="55" align="center"
+        <th field="content" width="70" align="center"
             formatter="formatHref">操作
         </th>
     </tr>
