@@ -37,42 +37,6 @@
             }
         }
 
-
-        function closePasswordModifyDialog() {
-            $("#dlg").dialog("close");
-            $("#oldPassword").val("");
-            $("#newPassword").val("");
-            $("#newPassword2").val("");
-        }
-
-        function modifyPassword() {
-            $("#fm").form("submit", {
-                url: url,
-                onSubmit: function () {
-                    var newPassword = $("#newPassword").val();
-                    var newPassword2 = $("#newPassword2").val();
-                    if (!$(this).form("validate")) {
-                        return false;
-                    }
-                    if (newPassword != newPassword2) {
-                        $.messager.alert("系统提示", "确认密码输入错误！");
-                        return false;
-                    }
-                    return true;
-                },
-                success: function (result) {
-                    var result = eval('(' + result + ')');
-                    if (result.success) {
-                        $.messager.alert("系统提示", "密码修改成功，下一次登录生效！");
-                        closePasswordModifyDialog();
-                    } else {
-                        $.messager.alert("系统提示", "密码修改失败");
-                        return;
-                    }
-                }
-            });
-        }
-
         function logout() {
             $.messager
                     .confirm(
@@ -163,46 +127,6 @@
             安全退出</a>
         </div>
     </div>
-</div>
-<div id="dlg" class="easyui-dialog"
-     style="width: 400px;height:250px;padding: 10px 20px" closed="true"
-     buttons="#dlg-buttons">
-    <form id="fm" method="post">
-        <table cellspacing="8px">
-            <tr>
-                <td>用户名：</td>
-                <td><input type="text" id="userName" name="userName"
-                           value="${currentUser.userName }" readonly="readonly"
-                           style="width: 200px"/>
-                </td>
-            </tr>
-            <tr>
-                <td>原密码：</td>
-                <td><input type="password" id="oldPassword"
-                           class="easyui-validatebox" required="true" style="width: 200px"/>
-                </td>
-            </tr>
-            <tr>
-                <td>新密码：</td>
-                <td><input type="password" id="newPassword" name="password"
-                           class="easyui-validatebox" required="true" style="width: 200px"/>
-                </td>
-            </tr>
-            <tr>
-                <td>确认新密码：</td>
-                <td><input type="password" id="newPassword2"
-                           class="easyui-validatebox" required="true" style="width: 200px"/>
-                </td>
-            </tr>
-        </table>
-    </form>
-</div>
-
-<div id="dlg-buttons">
-    <a href="javascript:modifyPassword()" class="easyui-linkbutton"
-       iconCls="icon-ok">保存</a> <a
-        href="javascript:closePasswordModifyDialog()"
-        class="easyui-linkbutton" iconCls="icon-cancel">关闭</a>
 </div>
 </body>
 </html>
