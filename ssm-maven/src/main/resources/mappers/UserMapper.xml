@@ -51,7 +51,7 @@
                 password=#{password}
             </if>
         </set>
-        where id=#{id}
+        where id=#{id} and <![CDATA[ id <> 2 ]]>
     </update>
 
     <delete id="deleteUser" parameterType="Integer">
