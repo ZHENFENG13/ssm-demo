@@ -1,10 +1,16 @@
 # ssm-demo <br /> 
-我的qq：1034683568<br /> 
-代码更新都会在ssm-maven项目下<br /> 
+Spring+SpringMVC+mybatis+easy-ui实现的一个简单demo，项目为两年前做的一个项目，后续会逐渐优化改造。 <br />
 
-Spring+SpringMVC+mybatis+easy-ui实现的一个简单demo，项目为两年前做的一个项目，后续会逐渐优化改造。 <br /> <br /> 
 ssm-demo仓库下会有三个项目，分别是ssm-demo、ssm-login、ssm-maven，ssm-demo为普通的JavaWeb工程，并没有引入maven管理项目， 
-而ssm-maven则为maven改造后的项目，使用maven统一管理项目jar包及项目构建，后续的优化都会在这个项目里做。 <br /> 
+而ssm-maven则为maven改造后的项目，使用maven统一管理项目jar包及项目构建，后续的优化都会在这个项目里做。
+
+# 项目地址： <br /> 
+  <a href='http://ssm-maven-demo.hanshuai.xin'>ssm-maven</a> <br /> 
+  登录名：admin <br /> 
+  密码：123456 <br /> 
+  <a href='http://ssm-login.hanshuai.xin'>ssm-login</a> <br /> 
+  登录名：admin <br /> 
+  密码：123456 <br /> 
 
 **基础篇**
 
@@ -38,14 +44,6 @@ ssm-demo仓库下会有三个项目，分别是ssm-demo、ssm-login、ssm-maven�
  - [Spring+SpringMVC+MyBatis+easyUI整合优化篇（十三）数据层优化-表规范、索引优化](http://www.cnblogs.com/han-1034683568/p/6768807.html)
  - [Spring+SpringMVC+MyBatis+easyUI整合优化篇（十四）谈谈写博客的原因和项目优化](http://www.cnblogs.com/han-1034683568/p/6782019.html)
 
-# 项目地址： <br /> 
-  <a href='http://ssm-maven-demo.hanshuai.xin'>ssm-maven</a> <br /> 
-  登录名：admin <br /> 
-  密码：123456 <br /> 
-  <a href='http://ssm-login.hanshuai.xin'>ssm-login</a> <br /> 
-  登录名：admin <br /> 
-  密码：123456 <br /> 
-  
 # 项目框架包括：
 Spring <br /> 
 SpringMVC <br /> 
