@@ -1,4 +1,4 @@
-# ssm-demo <br /> 
+# 项目简介 <br /> 
 Spring+SpringMVC+mybatis+easy-ui实现的一个简单demo，项目为两年前做的一个项目，后续会逐渐优化改造。 <br />
 
 ssm-demo仓库下会有三个项目，分别是ssm-demo、ssm-login、ssm-maven，ssm-demo为普通的JavaWeb工程，并没有引入maven管理项目， 
@@ -43,7 +43,7 @@ ssm-demo仓库下会有三个项目，分别是ssm-demo、ssm-login、ssm-maven�
  - [Spring+SpringMVC+MyBatis+easyUI整合优化篇（十三）数据层优化-表规范、索引优化](http://www.cnblogs.com/han-1034683568/p/6768807.html)
  - [Spring+SpringMVC+MyBatis+easyUI整合优化篇（十四）谈谈写博客的原因和项目优化](http://www.cnblogs.com/han-1034683568/p/6782019.html)
 
-# 项目框架包括：
+# 项目框架：
 Spring <br /> 
 SpringMVC <br /> 
 MyBatis <br /> 
