@@ -184,7 +184,7 @@
 
 <div id="dlg-buttons">
     <a href="javascript:modifyPassword()" class="easyui-linkbutton"
-       iconCls="icon-ok">保存</a> <a
+       iconCls="icon-ok">保存</a><a
         href="javascript:closePasswordModifyDialog()"
         class="easyui-linkbutton" iconCls="icon-cancel">关闭</a>
 </div>
