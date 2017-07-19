@@ -1,4 +1,5 @@
-# 项目简介 <br /> 
+## Quick Start 
+
 Spring+SpringMVC+mybatis+easy-ui实现的一个简单demo，项目为两年前做的一个项目，后续会逐渐优化改造。 <br />
 
 ssm-demo仓库下会有三个项目，分别是ssm-demo、ssm-login、ssm-maven，ssm-demo为普通的JavaWeb工程，并没有引入maven管理项目， 
@@ -9,7 +10,7 @@ ssm-demo仓库下会有三个项目，分别是ssm-demo、ssm-login、ssm-maven�
   登录名：admin <br /> 
   密码：123456 <br /> 
 
-# 博文介绍 <br /> 
+## Articles 
 
 **基础篇**
 
@@ -43,20 +44,22 @@ ssm-demo仓库下会有三个项目，分别是ssm-demo、ssm-login、ssm-maven�
  - [Spring+SpringMVC+MyBatis+easyUI整合优化篇（十三）数据层优化-表规范、索引优化](http://www.cnblogs.com/han-1034683568/p/6768807.html)
  - [Spring+SpringMVC+MyBatis+easyUI整合优化篇（十四）谈谈写博客的原因和项目优化](http://www.cnblogs.com/han-1034683568/p/6782019.html)
 
-# 项目框架：
+## Framework
+
 Spring <br /> 
 SpringMVC <br /> 
 MyBatis <br /> 
 后端界面则使用easyui进行搭建 <br /> 
 
-# 功能介绍：
+## Introduce
+
 本项目实现了一个简单的后台管理系统，可以作为ssm项目学习的脚手架，主要包含以下功能： <br /> 
 管理员的注册功能，登录功能，删除功能。 <br /> 
 文章的增删改查功能，图片的增删改查功能。 <br /> 
 图片上传功能。 <br /> 
 多文本编辑器UEditor整合。 <br /> 
 
-# 更新日志
+## Logs
   2017-02-23 初始化，接下来是bug修复，下一步打算将项目改为maven工程项目。 <br /> 
   2017-02-24 新增ssm-login项目，最基础的ssm项目搭建。 <br /> 
   2017-03-02 新增ssm-maven项目，Spring+SpringMVC+MyBatis+Maven+easyUI整合。 <br /> 
