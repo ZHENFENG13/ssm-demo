@@ -9,6 +9,17 @@ ssm-demo仓库下会有三个项目，分别是ssm-demo、ssm-login、ssm-maven�
   <a href='http://ssm-maven.hanshuai.xin'>ssm-maven</a> <br /> 
   登录名：admin <br /> 
   密码：123456 <br /> 
+  
+#### Previews
+
+###### Login Page
+![login](https://raw.githubusercontent.com/ZHENFENG13/resource/master/images/2017-07-19/login.png)
+###### Main Page
+![panel](https://raw.githubusercontent.com/ZHENFENG13/resource/master/images/2017-07-19/panel.png)
+###### Article Page
+![article](https://raw.githubusercontent.com/ZHENFENG13/resource/master/images/2017-07-19/article.png)
+###### Picture Page
+![picture](https://raw.githubusercontent.com/ZHENFENG13/resource/master/images/2017-07-19/picture.png)
 
 ## Articles 
 
