@@ -5,7 +5,7 @@ Spring+SpringMVC+mybatis+easy-ui实现的一个简单demo，项目为两年前�
 ssm-demo仓库下会有三个项目，分别是ssm-demo、ssm-login、ssm-maven，ssm-demo为普通的JavaWeb工程，并没有引入maven管理项目， 
 而ssm-maven则为maven改造后的项目，使用maven统一管理项目jar包及项目构建，后续的优化都会在这个项目里做。
 
-项目地址： <br /> 
+#### 项目地址
   <a href='http://ssm-maven.hanshuai.xin'>ssm-maven</a> <br /> 
   登录名：admin <br /> 
   密码：123456 <br /> 
