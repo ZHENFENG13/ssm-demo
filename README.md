@@ -21,7 +21,7 @@ ssm-demo仓库下会有三个项目，分别是ssm-demo、ssm-login、ssm-maven�
 ###### Picture Page
 ![picture](https://raw.githubusercontent.com/ZHENFENG13/resource/master/images/2017-07-19/picture.png)
 
-## Articles 
+## Documents 
 
 **基础篇**
 
