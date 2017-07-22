@@ -1,6 +1,6 @@
 ## Quick Start 
 
-Spring+SpringMVC+mybatis+easy-ui实现的一个简单demo，项目为两年前做的一个项目，后续会逐渐优化改造。 <br />
+Spring+SpringMVC+mybatis+easyUI实现的一个简单demo，项目来源于两年多前做的一个项目，后续会逐渐优化改造，关于项目的简介及技术选型，已经单独整理了一篇的文章--[项目简述及技术选型介绍](http://www.cnblogs.com/han-1034683568/p/6440090.html)。<br />
 
 ssm-demo仓库下会有三个项目，分别是ssm-demo、ssm-login、ssm-maven，ssm-demo为普通的JavaWeb工程，并没有引入maven管理项目， 
 而ssm-maven则为maven改造后的项目，使用maven统一管理项目jar包及项目构建，后续的优化都会在这个项目里做。
