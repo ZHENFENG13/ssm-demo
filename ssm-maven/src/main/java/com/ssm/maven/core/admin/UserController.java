@@ -115,11 +115,14 @@ public class UserController {
      */
     @RequestMapping("/list")
     public String list(@RequestParam(value = "page", required = false) String page, @RequestParam(value = "rows", required = false) String rows, User s_user, HttpServletResponse response) throws Exception {
-        PageBean pageBean = new PageBean(Integer.parseInt(page), Integer.parseInt(rows));
         Map<String, Object> map = new HashMap<String, Object>();
+        if (page != null && rows != null) {
+            PageBean pageBean = new PageBean(Integer.parseInt(page),
+                    Integer.parseInt(rows));
+            map.put("start", pageBean.getStart());
+            map.put("size", pageBean.getPageSize());
+        }
         map.put("userName", StringUtil.formatLike(s_user.getUserName()));
-        map.put("start", pageBean.getStart());
-        map.put("size", pageBean.getPageSize());
         List<User> userList = userService.findUser(map);
         Long total = userService.getTotalUser(map);
         JSONObject result = new JSONObject();
