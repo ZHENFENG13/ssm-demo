@@ -1,6 +1,6 @@
 ## Quick Start 
 
-Spring+SpringMVC+mybatis+easyUI的一个简单demo，实现了后台管理系统的基本功能，后续会逐渐优化改造，Wiki文档已经整理，可以到[wiki页面](https://github.com/ZHENFENG13/ssm-demo/wiki)查看，关于项目的简介及技术选型，也已经单独整理了一篇的文章--[项目简述及技术选型介绍](http://www.cnblogs.com/han-1034683568/p/6440090.html)。<br />
+Spring+SpringMVC+mybatis+easyUI的一个简单demo，实现了后台管理系统的基本功能，后续会逐渐优化改造，Wiki文档已经整理，可以到[Wiki页面](https://github.com/ZHENFENG13/ssm-demo/wiki)查看，关于项目的简介及技术选型，也已经单独整理了一篇的文章--[项目简述及技术选型介绍](http://www.cnblogs.com/han-1034683568/p/6440090.html)。<br />
 
 #### 项目地址
   <a href='http://ssm-maven.hanshuai.xin'>ssm-maven</a> <br /> 
@@ -84,5 +84,5 @@ Spring+SpringMVC+mybatis+easyUI的一个简单demo，实现了后台管理系统
   2017-04-13 项目代码整理。<br/>
   2017-04-17 整合druid，配置文件整理。<br/>
   2017-04-18 开启druid各项监控功能。<br/>
-
+  2017-08-05 架构及目录结构整理，Wiki文档编辑。<br/>
 
