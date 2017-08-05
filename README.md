@@ -1,9 +1,6 @@
 ## Quick Start 
 
-Spring+SpringMVC+mybatis+easyUI实现的一个简单demo，项目来源于两年多前做的一个项目，后续会逐渐优化改造，关于项目的简介及技术选型，已经单独整理了一篇的文章--[项目简述及技术选型介绍](http://www.cnblogs.com/han-1034683568/p/6440090.html)。<br />
-
-ssm-demo仓库下会有三个项目，分别是ssm-demo、ssm-login、ssm-maven，ssm-demo为普通的JavaWeb工程，并没有引入maven管理项目， 
-而ssm-maven则为maven改造后的项目，使用maven统一管理项目jar包及项目构建，后续的优化都会在这个项目里做。
+Spring+SpringMVC+mybatis+easyUI的一个简单demo，实现了后台管理系统的基本功能，后续会逐渐优化改造，Wiki文档已经整理，可以到[wiki页面](https://github.com/ZHENFENG13/ssm-demo/wiki)查看，关于项目的简介及技术选型，也已经单独整理了一篇的文章--[项目简述及技术选型介绍](http://www.cnblogs.com/han-1034683568/p/6440090.html)。<br />
 
 #### 项目地址
   <a href='http://ssm-maven.hanshuai.xin'>ssm-maven</a> <br /> 
@@ -13,18 +10,16 @@ ssm-demo仓库下会有三个项目，分别是ssm-demo、ssm-login、ssm-maven�
 ![Version 1.0.0](https://img.shields.io/badge/version-1.0.0-yellow.svg)
 [![License](https://img.shields.io/badge/license-apache-blue.svg)](https://github.com/ZHENFENG13/ssm-demo/blob/master/LICENSE)
 
-  
-#### Previews
-
-###### Login Page
-![login](https://raw.githubusercontent.com/ZHENFENG13/resource/master/images/2017-07-19/login.png)
-###### Main Page
-![panel](https://raw.githubusercontent.com/ZHENFENG13/resource/master/images/2017-07-19/panel.png)
-###### Article Page
-![article](https://raw.githubusercontent.com/ZHENFENG13/resource/master/images/2017-07-19/article.png)
-###### Picture Page
-![picture](https://raw.githubusercontent.com/ZHENFENG13/resource/master/images/2017-07-19/picture.png)
-
+#### 架构图
+ 
+ ###### 架构简图
+ ![架构简图](https://raw.githubusercontent.com/ZHENFENG13/resource/master/images/2017-08-05/ssm%E6%9E%B6%E6%9E%84%E5%9B%BE-%E7%AE%80%E7%89%88.png)
+ 
+ ###### 架构详图
+ ![1.0](https://raw.githubusercontent.com/ZHENFENG13/resource/master/images/2017-08-05/ssm%E6%9E%B6%E6%9E%84%E5%9B%BE-1.0-%E8%AF%A6%E7%89%88.png)
+ 
+想要进一步了解可以到[架构演进详解](https://github.com/ZHENFENG13/ssm-demo/wiki/%E6%9E%B6%E6%9E%84%E6%BC%94%E8%BF%9B%E8%AF%A6%E8%A7%A3)wiki页面查看。
+ 
 ## Documents 
 
 **基础篇**
@@ -59,20 +54,22 @@ ssm-demo仓库下会有三个项目，分别是ssm-demo、ssm-login、ssm-maven�
 * [x] [Spring+SpringMVC+MyBatis+easyUI整合优化篇（十三）数据层优化-表规范、索引优化](http://www.cnblogs.com/han-1034683568/p/6768807.html)
 * [x] [Spring+SpringMVC+MyBatis+easyUI整合优化篇（十四）谈谈写博客的原因和项目优化](http://www.cnblogs.com/han-1034683568/p/6782019.html)
 
-## Framework
-
-Spring <br /> 
-SpringMVC <br /> 
-MyBatis <br /> 
-后端界面则使用easyui进行搭建 <br /> 
-
 ## Introduce
 
+###### 功能简介
+
 本项目实现了一个简单的后台管理系统，可以作为ssm项目学习的脚手架，主要包含以下功能： <br /> 
-管理员的注册功能，登录功能，删除功能。 <br /> 
-文章的增删改查功能，图片的增删改查功能。 <br /> 
-图片上传功能。 <br /> 
-多文本编辑器UEditor整合。 <br /> 
+- 管理员的注册功能，登录功能，删除功能。 <br /> 
+- 文章的增删改查功能，图片的增删改查功能。 <br /> 
+- 图片上传功能。 <br /> 
+- 多文本编辑器UEditor整合。 <br /> 
+
+###### Framework
+
+- Spring <br /> 
+- SpringMVC <br /> 
+- MyBatis <br /> 
+- 后端界面则使用easyui进行搭建 <br /> 
 
 ## Logs
   2017-02-23 初始化，接下来是bug修复，下一步打算将项目改为maven工程项目。 <br /> 
