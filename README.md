@@ -5,7 +5,7 @@
 **ssm系列**<br />
 * [x] **ssm-demo:Spring+SpringMVC+Mybatis+easyUI整合**
 * [x] [perfect-ssm](https://github.com/ZHENFENG13/perfect-ssm)：RESTful API+redis缓存
-* [ ] [ssm-cluster](https://github.com/ZHENFENG13/ssm-cluster):前后端分离+集群部署
+* [x] [ssm-cluster](https://github.com/ZHENFENG13/ssm-cluster):前后端分离+集群部署(springboot+vue)
 * [ ] [ssm-dubbo](https://github.com/ZHENFENG13/ssm-dubbo)：dubbo服务化
 * [ ] [ssm-micro-service](https://github.com/ZHENFENG13/ssm-micro-service)：springcloud技术栈实现微服务化
 
