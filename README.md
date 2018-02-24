@@ -9,6 +9,8 @@
 * [ ] [ssm-dubbo](https://github.com/ZHENFENG13/ssm-dubbo)：dubbo服务化
 * [ ] [ssm-micro-service](https://github.com/ZHENFENG13/ssm-micro-service)：springcloud技术栈实现微服务化
 
+**特别提示:数据库sql脚本文件在resource/db目录下！**
+
 本项目为ssm系列的第一篇，**Spring+SpringMVC+mybatis+easyUI的一个简单demo**，实现了后台管理系统的基本功能，后续会逐渐优化改造，Wiki文档已经整理，可以到[Wiki Page](https://github.com/ZHENFENG13/ssm-demo/wiki)查看，关于项目的简介及技术选型，也已经单独整理了一篇的文章--[项目简述及技术选型介绍](http://www.cnblogs.com/han-1034683568/p/6440090.html)。<br />
 
 #### 项目地址
