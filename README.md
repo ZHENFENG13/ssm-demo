@@ -30,6 +30,12 @@
  ![1.0](https://raw.githubusercontent.com/ZHENFENG13/resource/master/images/2017-08-05/ssm%E6%9E%B6%E6%9E%84%E5%9B%BE-1.0-%E8%AF%A6%E7%89%88.png)
  
 想要进一步了解可以到[架构演进详解](https://github.com/ZHENFENG13/ssm-demo/wiki/%E6%9E%B6%E6%9E%84%E6%BC%94%E8%BF%9B%E8%AF%A6%E8%A7%A3)wiki页面查看。
+
+#### 捐赠
+
+**网站的持续运行需要各项基础设施的搭建，而服务期的续费和维护及各种配套服务的购买也需要一定的费用，希望朋友们给予一点支持，谢谢！**
+
+**支付宝：**<img src="https://raw.githubusercontent.com/ZHENFENG13/resource/master/images/2018-02-27/zhifubao1.jpg" width = "200" height = "200" alt="zhifubao"/>**微信支付：**<img src="https://raw.githubusercontent.com/ZHENFENG13/resource/master/images/2018-02-27/wxpay.jpg" width = "200" height = "200" alt="wxpay"/>
  
 ## Documents 
 
