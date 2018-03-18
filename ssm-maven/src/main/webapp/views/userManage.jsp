@@ -141,7 +141,7 @@
             </tr>
             <tr>
                 <td>密码：</td>
-                <td><input type="text" id="password" name="password"
+                <td><input type="password" id="password" name="password"
                            class="easyui-validatebox" required="true"/>&nbsp;<font
                         color="red">*</font>
                 </td>
