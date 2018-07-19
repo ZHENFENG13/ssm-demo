@@ -125,6 +125,8 @@
  
 ## Documents 
 
+* [x] [GitChat达人课-SSM搭建精美实用的管理系统](https://gitbook.cn/gitchat/column/5b4dae389bcda53d07056bc9)
+
 **基础篇**
 
 * [x] [Spring+SpringMVC+MyBatis+easyUI整合基础篇（一）项目简述及技术选型介绍](http://www.cnblogs.com/han-1034683568/p/6440090.html)
