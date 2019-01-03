@@ -18,7 +18,7 @@
 * [x] **ssm-demo:Spring+SpringMVC+Mybatis+easyUI整合**
 * [x] [perfect-ssm](https://github.com/ZHENFENG13/perfect-ssm)：RESTful API+redis缓存
 * [x] [ssm-cluster](https://github.com/ZHENFENG13/ssm-cluster):前后端分离+集群部署(springboot+vue)
-* [ ] [ssm-dubbo](https://github.com/ZHENFENG13/ssm-dubbo)：dubbo服务化
+* [x] [ssm-dubbo](https://github.com/ZHENFENG13/ssm-dubbo)：dubbo服务化
 * [ ] [ssm-micro-service](https://github.com/ZHENFENG13/ssm-micro-service)：springcloud技术栈实现微服务化
 
 **特别提示:数据库sql脚本文件在resources/db目录下！**
